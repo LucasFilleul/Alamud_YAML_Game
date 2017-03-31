@@ -1,394 +1,1169 @@
+# ###########################################################################################################
+# TOUTES LES LOCATIONS
+# ###########################################################################################################
+---
+id: maison-000
+type: Location
+contains:
+  - lampe-000
+  - couteau-000
+  - gateaux-000
+  - eau-000
+  - sac-000
+events:
+  info:
+    actor: "Notre maison !"
+  look:
+    actor: |
+      Vous vous reveillez dans votre salon. Tout semble bizarrement calme. Vous decidez de sortir.
+      Mais avant cela, pourquoi pas prendre quelques affaires. Au nord se trouve la sortie.
+---
+id: rue-000
+type: Location
+contains:
+  - matraque-000
+  - pistolet-000
+  - lettre-000
+events:
+  info:
+    actor: "Vous êtes dans la rue ! "
+  look:
+    actor: |
+      Vous êtes dans la rue. L'ambiance est chaotique. La rue est vide, une voiture de police est accidentée près de vous.
+      La rue continue à l'est vers le centre commercial, à l'ouest vers les résidences et au nord se trouve le manoir de la ville. Votre maison est au sud.
+---
+id: rue-001
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. La rue continue à l'est vers le centre commercial, à l'ouest vers les résidences.
+      Au nord se trouve le jardin du palais et au sud le magasin d'armes fermé.
+---
+id: rue-002
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. A l'ouest, la rue continue vers les résidences et à l'est vous entrez dans le Centre Commercial.
+      Au nord la rue va vers un parking.
+---
+id: rue-012
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. Au sud la rue continue vers le centre commercial et les résidences.
+      A l'est, la rue continue vers le parking.
+---
+id: rue-013
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. A l'ouest la rue continue vers le centre commercial et les résidences.
+      Au nord, la rue continue vers le parking.
+---
+id: rue-014
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. Au sud la rue continue vers le centre commercial, à l'est se trouve un parking.
 ---
 id: parking-000
 type: Location
 contains:
-  - lampe-000
+  - voiture-000
 events:
   info:
-    actor: "Parking de l'IUT."
+    actor: "Vous êtes sur le parking."
   look:
     actor: |
-      Vous êtes sur le parking de l'IUT.  Au nord-est, se trouve
-      l'entrée du département info.  Il y a un arbre près de vous.
-      Les branches les plus basses sont à portée de main.
+      Vous êtes sur le parking. A l'est vous revennez sur vos pas.  Il y a une voiture garée.
 ---
-id: portal-parking-arbre-000
-type: Portal
-exits:
-  - id: parking-000-haut
-    location: parking-000
-    direction: haut
-    events:
-      enter-portal:
-        actor   : "Vous grimpez prestement dans l'arbre."
-        observer: "{{ actor.name }} grimpe dans l'arbre."
-      leave-portal:
-        observer: |
-          {{ actor.name }} descend de l'arbre et vous rejoint
-          sur le parking de l'IUT.
-  - id: arbre-000-bas
-    location: arbre-000
-    direction: bas
-    events:
-      enter-portal:
-        actor   : "Vous descendez prudemment de l'arbre."  
-        observer: "{{ actor.name }} vous quitte et descend de l'arbre."
-      leave-portal:
-        observer: "{{ actor.name }} vous rejoint dans l'arbre."
----
-id: arbre-000
+id: rue-005
 type: Location
 events:
   info:
-    actor: "Dans l'arbre."
+    actor: "Vous êtes dans la rue."
   look:
     actor: |
-      Vous êtes dans l'arbre.  Les branches semblent heureusement
-      solides.  Il y a un nid au creux d'une de ces branches.
-parts:
-  - nid-000
+      La rue est vide. Toujours personne en vue. A l'ouest la rue se dirige vers le centre commercial et le parking.
+      Au sud vous continuez vers les résidences.
+      Au nord se trouve le jardin du palais.
 ---
-id: nid-000
-type: Container
-name: nid
+id: rue-006
+type: Location
 events:
+  info:
+    actor: "Vous êtes dans la rue."
   look:
     actor: |
-      C'est un nid de facture plutôt sommaire,
-      mais assez spacieux.
-contains:
-  - badge-000
+      La rue est vide. Toujours personne en vue. A l'ouest vous arrivez près les résidences.
+      Au sud vous arrivez près du viel immeuble de la ville.
+      Au nord vous revenez vers votre maison et en direction du centre commercial.
 ---
-id: badge-000
+id: rue-007
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. A l'est se trouve la porte d'entrée de l'immeuble.
+      Au nord vous revenez vers les résidences.
+---
+id: rue-008
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue.
+      A l'est vous continuez la rue.
+      A l'ouest vous revenez vers les résidences.
+      Au sud se trouve l'entrée de immeuble.
+---
+id: rue-009
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue.
+      A l'ouest vous revenez vers les résidences.
+      Au sud vous continuez sur la rue.
+---
+id: rue-010
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue.
+      Au nord vous revenez vers les résidences.
+      Au sud vous continuez sur la rue.
+---
+id: rue-011
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. Au nord vous revennez sur vos pas.
+      La route au sud semble être impossible à prendre.
+---
+id: rue-015
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue mais vous semblez entendre quelqu'un appeler à l'aide.
+      Au sud se trouve une maison qui semble ouverte mais vous entendez des bruits étrange en sortir.
+      A l'ouest vous continuez dans le quatier des résidences.
+      A l'est vous sortez du quartier.
+---
+id: rue-016
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue mais vous entendez clairement quelqu'un appeler à l'aide.
+      Au sud se trouve la maison d'où provient les cris.
+      A l'est vous vous dirigez vers la sortie du quartier.
+---
+id: maison-001
+type: Location
+props:
+  - dark
+contains:
+  - piedbiche-000
+  - conserve-000
+  - eau-001
+  - zombie
+events:
+  info:
+    actor: "La maison est plongée dans le noir. Vous entendez quelques bruits byzarre."
+  look:
+    actor: |
+      Contre le mur se trouve un zombie. Il n'a pas l'air de vous avoir vu.
+      Au sud vous revennez sur vos pas.
+---
+id: maison-002
+type: Location
+contains:
+  - humains-000
+  - zombie1
+  - zombie2
+  - clef-000
+events:
+  info:
+    actor: "Vous arrivez près de la maison où vous avez entendu les cris."
+  look:
+    actor: |
+      Vous voyez la personne en difficultée face à deux zombie.
+      L'un d'eux vous a vu. Deux options : fuir ou se battre !
+      Au nord, vous retournez sur vos pas.
+---
+id: immeuble-000
+type: Location
+contains:
+  - zombie3
+  - zombie4
+  - zombie5
+  - zombie6
+  - zombie7
+events:
+  info:
+    actor: "Vous entrez dans l'immeuble."
+  look:
+    actor: |
+      Vous voyez plusieurs zombie, impossible de les compter. Si jamais vous tirez, les autres risqueraient de vous entendre.
+      Au nord vous retournez dans la rue.
+---
+id: immeuble-001
+type: Location
+contains:
+  - zombie8
+  - zombie9
+  - zombie10
+events:
+  info:
+    actor: "Vous continuez dans l'immeuble."
+  look:
+    actor: |
+      Vous voyez plusieurs zombies, trois au total.
+      A l'est vous retournez dans l'entrée, au sud vous continuez dans l'immeuble.
+---
+id: immeuble-002
+type: Location
+events:
+  info:
+    actor: "Vous continuez dans l'immeuble."
+  look:
+    actor: |
+      Vous ne voyez pas zombies cette fois. Vous voyez un escalier mais il semble inutilisable.
+      Au nord vous retournez vers l'entrée, à l'est vous continuez dans l'immeuble.
+---
+id: immeuble-003
+type: Location
+contains:
+  - zombie83
+  - pompe-000
+events:
+  info:
+    actor: "Vous continuez dans l'immeuble."
+  look:
+    actor: |
+      Un zombie se trouve au milieu de la pièce. Un fusil à pompe semble être à ses pieds...
+      Pas moyen de le prendre sans se faire remarquer.
+      A l'ouest vous retournez vers l'entrée.
+---
+id: jardin-000
+type: Location
+contains:
+  - jouet-000
+events:
+  info:
+    actor: "Vous arrivez sur le jardin ouest du manoir."
+  look:
+    actor: |
+      Au sud vous retournez sur la rue.
+---
+id: jardin-001
+type: Location
+contains:
+  - hache-000
+events:
+  info:
+    actor: "Vous arrivez sur le jardin est du manoir."
+  look:
+    actor: |
+      Au sud vous retournez sur la rue.
+---
+id: allee-000
+type: Location
+contains:
+  - essence-000
+events:
+  info:
+    actor: "Vous arrivez dans l'allée du manoir."
+  look:
+    actor: |
+      Au sud vous retournez sur la rue.
+---
+id: cc-000
+type: Location
+
+events:
+  info:
+    actor: "Vous arrivez dans le centre commercial."
+  look:
+    actor: |
+      Au sud vous continuez dans le centre. A l'ouest vous retournez sur la rue.
+---
+id: cc-001
+type: Location
+events:
+  info:
+    actor: "Vous continuez dans le centre commercial."
+  look:
+    actor: |
+      Un zombie semble être bloqué dans un des magasins mais il ne posera pas de problèmes.
+      Au sud vous continuez dans le centre. Au nord vous retournez vers l'entrée.
+---
+id: cc-002
+type: Location
+events:
+  info:
+    actor: "Vous continuez dans le centre commercial."
+  look:
+    actor: |
+      Au sud la route semble être bloquée. Au nord vous retournez vers l'entrée. Une bouche d'égout semble donner sur un tunnel.
+---
+id: tunnel-000
+type: Location
+events:
+  info:
+    actor: "Vous êtes à l'entrée du tunnel."
+  look:
+    actor: |
+      A l'ouest le tunnel continue. L'échelle vous ramène dans le centre commercial.
+---
+id: tunnel-001
+type: Location
+events:
+  info:
+    actor: "Vous continuez dans le tunnel."
+  look:
+    actor: |
+      A l'ouest le tunnel semble être bouché. A l'est vous revenez vers l'échelle.
+      Il semble y avoir un passage au dessus de vous.
+---
+id: magasin-000
+type: Location
+contains:
+  - fusil-000
+  - medikit-000
+events:
+  info:
+    actor: "Vous arrivez dans le magasin d'armes."
+  look:
+    actor: |
+      Le magasin semble être inhabité. Regardons ce qu'il y a.
+# ###########################################################################################################
+# TOUS LES PORTALS
+# ###########################################################################################################
+---
+id: maison-000-portal1
+type: Portal
+exits:
+  - id: maison-000-nord
+    location: maison-000
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous sortez de la maison ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-000-sud
+    location: rue-000
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans la maison."
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-000-portal2
+type: Portal
+exits:
+  - id: rue-000-ouest
+    location: rue-000
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-005-est
+    location: rue-005
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-000-portal3
+type: Portal
+exits:
+  - id: rue-000-est
+    location: rue-000
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-001-ouest
+    location: rue-001
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-001-portal4
+type: Portal
+exits:
+  - id: rue-001-est
+    location: rue-001
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-002-ouest
+    location: rue-002
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-000-portal5
+type: Portal
+exits:
+  - id: rue-000-nord
+    location: rue-000
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous arrivez dans l'allé du manoir ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: allee-000-sud
+    location: allee-000
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-001-portal6
+type: Portal
+exits:
+  - id: rue-001-nord
+    location: rue-001
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous arrivez dans le jardin est du manoir ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: jardin-001-sud
+    location: jardin-001
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-005-portal7
+type: Portal
+exits:
+  - id: rue-005-nord
+    location: rue-005
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous arrivez dans le jardin ouest du manoir ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: jardin-000-sud
+    location: jardin-000
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-002-portal9
+type: Portal
+exits:
+  - id: rue-002-nord
+    location: rue-002
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-012-sud
+    location: rue-012
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-002-portal10
+type: Portal
+exits:
+  - id: rue-002-est
+    location: rue-002
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans le centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: cc-000-ouest
+    location: cc-000
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-012-portal11
+type: Portal
+exits:
+  - id: rue-012-est
+    location: rue-012
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-013-ouest
+    location: rue-013
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-013-portal12
+type: Portal
+exits:
+  - id: rue-013-nord
+    location: rue-013
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-014-sud
+    location: rue-014
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-014-portal13
+type: Portal
+exits:
+  - id: rue-014-ouest
+    location: rue-014
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans le parking ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: parking-000-est
+    location: parking-000
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: cc-000-portal14
+type: Portal
+exits:
+  - id: cc-000-sud
+    location: cc-000
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans le centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: cc-001-nord
+    location: cc-001
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revennez dans l'entrée du centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: cc-001-portal15
+type: Portal
+exits:
+  - id: cc-001-sud
+    location: cc-001
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans le centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: cc-002-nord
+    location: cc-002
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revennez dans l'entrée du centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-005-portal16
+type: Portal
+exits:
+  - id: rue-005-sud
+    location: rue-005
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-006-nord
+    location: rue-006
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-006-portal18
+type: Portal
+exits:
+  - id: rue-006-sud
+    location: rue-006
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-007-nord
+    location: rue-007
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-009-portal19
+type: Portal
+exits:
+  - id: rue-009-sud
+    location: rue-009
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-010-nord
+    location: rue-010
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-010-portal20
+type: Portal
+exits:
+  - id: rue-010-sud
+    location: rue-010
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-011-nord
+    location: rue-011
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-009-portal22
+type: Portal
+exits:
+  - id: rue-009-ouest
+    location: rue-009
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-008-est
+    location: rue-008
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-008-portal23
+type: Portal
+exits:
+  - id: rue-008-ouest
+    location: rue-008
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-007-est
+    location: rue-007
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-006-portal24
+type: Portal
+exits:
+  - id: rue-006-ouest
+    location: rue-006
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-015-est
+    location: rue-015
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-015-portal25
+type: Portal
+exits:
+  - id: rue-015-ouest
+    location: rue-015
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-016-est
+    location: rue-016
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-015-portal26
+type: Portal
+exits:
+  - id: rue-015-sud
+    location: rue-015
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans une maison ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: maison-001-nord
+    location: maison-001
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-016-portal27
+type: Portal
+exits:
+  - id: rue-016-sud
+    location: rue-016
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans une maison ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: maison-002-nord
+    location: maison-002
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-008-portal28
+type: Portal
+exits:
+  - id: rue-008-sud
+    location: rue-008
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: immeuble-000-nord
+    location: immeuble-000
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: immeuble-000-portal29
+type: Portal
+exits:
+  - id: immeuble-000-ouest
+    location: immeuble-000
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: immeuble-001-est
+    location: immeuble-001
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: immeuble-001-portal30
+type: Portal
+exits:
+  - id: immeuble-001-sud
+    location: immeuble-001
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: immeuble-002-nord
+    location: immeuble-002
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: immeuble-002-portal31
+type: Portal
+exits:
+  - id: immeuble-002-est
+    location: immeuble-002
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: immeuble-003-ouest
+    location: immeuble-003
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: cc-002-portal32
+type: Portal
+exits:
+  - id: cc-002-bas
+    location: cc-002
+    direction: bas
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans un tunnel ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: tunnel-000-haut
+    location: tunnel-000
+    direction: haut
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans le centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: tunnel-000-portal33
+type: Portal
+exits:
+  - id: tunnel-000-ouest
+    location: tunnel-000
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans un tunnel ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: tunnel-001-est
+    location: tunnel-001
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans un tunnel ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: tunnel-001-portal34
+type: Portal
+exits:
+  - id: tunnel-001-haut
+    location: tunnel-001
+    direction: haut
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans le magasin d'armes ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: magasin-000-bas
+    location: magasin-000
+    direction: bas
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans le tunnel !"
+        observer:
+      leave-portal:
+        observer:
+# ###########################################################################################################
+# TOUTES LES OBJETS
+# ###########################################################################################################
+---
+id: eau-000
 type: Thing
-name: badge
+gender: fem
+name:
+  - eau
+  - bouteille
 props:
   - takable
-  - key-for-porte-porche-000
+  - drinkable
 events:
   info:
-    actor: "Un badge de sécurité."
+    actor:
+      - props: =eau-000:drink
+        data : "La bouteille est vide."
+      - data : "Cette eau semble potable, pourquoi pas la boire."
   look:
     actor: |
-      C'est un badge de sécurité permettant d'ouvrir des
-      portes sécurisées.
----
-id: portal-parking-porche-000
-type: Portal
-exits:
-  - id: parking-000-nord-est
-    location: parking-000
-    direction: nord-est
-  - id: porche-000-sud-ouest
-    location: porche-000
-    direction: sud-ouest
----
-id: porche-000
-type: Location
-events:
-  info:
-    actor: "Porche du département info."
-  look:
-    actor: |
-      Vous êtes sur le porche du département info.
-      Au nord-est, une porte donne accès au hall du
-      département. Au sud-ouest, une allée mène au
-      parking de l'IUT.
----
-id: portal-porche-hall-000
-type: Portal
-props:
-  - closed
-  - closable
-exits:
-  - id: porche-000-nord-est
-    location: porche-000
-    direction: nord-est
-    name:
-      - porte
-    gender: fem
-    props:
-      - for-enter
-    events:
-      enter-portal:
-        actor     : "Vous entrez dans le département info."
-        observer  : "{{ actor.name }} entre dans le département info."
-        failed:
-          actor   : &porte001 |
-            La porte d'accès au département info est sécurisée.
-            Elle est actuellement fermée et ne peut être ouverte
-            qu'avec un badge de sécurité.
-          observer: &porte002 |
-            {{ actor.name }} tente en vain d'ouvrir la porte du
-            département info.
-      leave-portal:
-        actor     : "Vous sortez du département info."
-        observer  : "{{ actor.name }} sort du département info."
-      open        :
-        - props   : portal:closed
-          actor   : *porte001
-          observer: *porte002
-        - props   : -portal:closed
-          actor   : &porte003 "La porte est déjà ouverte!"
-      open-with   :
-        - props   :
-            - portal:closed
-            - object2:key-for-porte-porche-000
-          effects :
-            type  : ChangePropEffect
-            modifs:
-              - -portal:closed
-          actor   : |
-            La porte du département s'ouvre avec un déclic.
-          observer: |
-            {{ actor.name }} ouvre la porte du département info
-            avec un badge de sécurité.
-        - props   :
-            - portal:closed
-            - -object2:key-for-porte-porche-000
-          actor   : |
-            Vous tentez vainement d'ouvrir la porte avec
-            {{ object2.noun_the() }}
-          observer: |
-            {{ actor.name }} tente vainement d'ouvrir la porte du
-            département info avec {{ object2.noun_a() }}
-        - props   :
-            - -portal:closed
-          actor   : *porte003
-          observer: |
-            {{ actor.name }} tente futilement d'ouvrir la porte du
-            département info avec {{ object2.noun_a() }}, alors
-            qu'elle est déjà ouverte.
-      close       : &porte004
-        - props   : portal:closed
-          actor   : "Vous fermez la porte du département."
-          observer: "{{ actor.name }} ferme le porte du département info."
-          effects :
-            - type  : ChangePropEffect
-              modifs: =portal-porche-hall-000:closed
-      close-with  : *porte004
-  - id: hall-000-sud-ouest
-    location: hall-000
-    direction: sud-ouest
-    name: porte
-    gender: fem
-    props:
-      - for-leave
-    events:
-      enter-portal:
-        observer  : "{{ actor.name }} sort du département info."
-        failed:
-          actor   : |
-            La porte d'accès au département info est sécurisée.
-            Elle est actuellement fermée et, même pour sortir,
-            elle ne peut être ouverte qu'avec un badge de sécurité.
-          observer: |
-            {{ actor.name }} tente en vain de sortir par la porte
-            du département info.
----
-id: hall-000
-type: Location
-props:
-  - dark
-events:
-  info:
-    actor: "Le hall du département info."
-  look:
-    actor: |
-      Vous êtes dans le hall du département info de l'IUT.
-      Au sud-ouest, la porte d'entrée mène au porche.  Un
-      escalier mène à l'étage.  Un tableau d'affichage est
-      accroché au mur.
-parts:
-  - tableau-000
-  - notice-000
----
-id: tableau-000
-type: Thing
-name: tableau
-events:
-  info:
-    actor: "Un tableau d'affichage."
-  look:
-    actor: |
-      Sur le tableau d'affichage une notice jaune est
-      fixée par une punaise.
----
-id: notice-000
-type: Thing
-name: notice
-gender: fem
-events:
-  info:
-    actor: "Une notice jaune."
-  look:
-    actor: |
-      Sur cette notice est inscrit: <i>mdp paradis.mud</i>: <tt>XYZZY</tt>
----
-id: escalier-000
-type: Portal
-exits:
-  - id: hall-000-haut
-    location: hall-000
-    direction: haut
-  - id: etage-000-bas
-    location: etage-000
-    direction: bas
----
-id: etage-000
-type: Location
-props:
-  - dark
-events:
-  info:
-    actor: "Étage du département info."
-  look:
-    actor: |
-      Vous êtes à l'étage du département.  Au nord-ouest,
-      la salle 22 est ouverte.
----
-id: etage-salle-22-000
-type: Portal
-exits:
-  - id: etage-000-nord-ouest
-    location: etage-000
-    direction: nord-ouest
-    props:
-      - for-enter
-  - id: salle-22-000-sud-est
-    location: salle-22-000
-    direction: sud-est
-    props:
-      - for-leave
----
-id: salle-22-000
-type: Location
-props:
-  - dark
-events:
-  info:
-    actor: "Salle 22."
-  look:
-    actor: |
-      Vous êtes dans la salle 22.  Il y a un ordinateur
-      allumé.  Au sud-est, une porte donne sur la partie
-      centrale de l'étage.
-  bouton-cabane:
-    observer: |
-      l'ordinateur clignote brièvement.
-parts:
-  - ordinateur-000
----
-id: ordinateur-000
-type: Thing
-names:
-  - ordinateur
-  - ordi
-props:
-  - light-on
-events:
-  info:
-    actor: "Un ordinateur."
-  look:
-    actor: |
-      L'ordinateur est allumé.  Le prompt dit: <i>tapez
-      le mot de passe du paradis.</i>
-  type:
-    - props: event:typed-xyzzy
+      Cette eau semble potable !
+  drink:
+    - props : object:drink
+      actor : "La bouteille est vide."
+    - actor : "Vous buvez l'eau."
+      observer:
       effects:
-        - type  : EnterPortalEffect
-          exit  : =portal-ordinateur-cabane-000-exit-1
-      observer: |
-        {{ actor.name }} entre un mot de passe dans l'ordinateur.
-    - actor: |
-        Ce n'est pas le bon mot de passe.
-      observer: |
-        {{ actor.name }} entre un mot de passe dans l'ordinateur,
-        mais ce n'est pas le bon.
+        - type  : ChangePropEffect
+          modifs: object:drink
 ---
-id: portal-ordinateur-cabane-000
-type: Portal
-exits:
-  - id: portal-ordinateur-cabane-000-exit-1
-    location: salle-22-000
-    events:
-      enter-portal:
-        actor: |
-          Une étrange lumière émane de l'écran et emplit
-          la salle.  Vous vous dématérialisez et êtes aspiré
-          dans le widget étiqueté "ENTREZ SANS FRAPPER"
-          sur l'écran.
-        observer: "{{ actor.name }} disparaît."
-      leave-portal:
-        actor   : "Vous vous rematérialisez en salle 22."
-        observer: "{{ actor.name }} apparaît de nulle part."
-  - id: portal-ordinateur-cabane-exit-2
-    location: cabane-000
-    direction: est
-    props:
-      - for-leave
-    events:
-      enter-portal:
-        - props: exit:activated
-          actor: |
-            Vous sautez dans le vide.  Un tapis volant vous
-            cueille dans votre chute et plonge dans la cascade.
-          observer: |
-            {{ actor.name }} s'élance dans le vide.  Un tapis
-            volant le cueille dans sa chute et plonge dans la
-            cascade.
-          effects:
-            - type  : ChangePropEffect
-              modifs: -exit:activated
-        - actor: |
-            Vous sautez dans le vide et vous vous écrasez en
-            bas de la falaise.
-          observer: |
-            {{ actor.name }} s'élance dans le vide et s'écrase
-            en bas de la falaise.
-          data-driven: true
-          effects:
-            - type: DeathEffect
----
-id: cabane-000
-type: Location
+id: eau-001
+type: Thing
+gender: fem
+name:
+  - eau
+  - bouteille
+props:
+  - takable
+  - drinkable
 events:
   info:
-    actor: "Une cabane dans un arbre."
+    actor:
+      - props: =eau-001:drink
+        data : "La bouteille est vide."
+      - data : "Cette eau semble potable, pourquoi pas la boire."
   look:
     actor: |
-      Vous êtes dans une cabane construite dans un arbre.
-      Elle surplombe un gouffre dans lequel se déverse une
-      cascade.  A l'est, une ouverture dans la balustrade
-      semble vous offrir la dangereuse option de sauter dans
-      le vide.  Sur le mur, un bouton est étiquetté:
-      <i>Taxi Service</i>.
-parts:
-  - bouton-cabane-000
+      Cette eau semble potable !
+  drink:
+    - props : object:drink
+      actor : "La bouteille est vide."
+    - actor : "Vous buvez l'eau."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:drink
 ---
-id: bouton-cabane-000
+id: gateaux-000
 type: Thing
 name:
-  - bouton
+  - gateaux
+  - biscuits
 props:
-  - pushable
+  - takable
+  - eatable
 events:
+  info:
+    actor:
+      - props: =gateaux-000:eat
+        data : "Le paquet de gateaux est vide."
+      - data : "Les gateaux semblent mangeables, pourquoi pas les manger."
   look:
     actor: |
-      Un bouton étiqueté: <i>Taxi Service</i>.
-  push:
+      Les gateaux semblent mangeables !
+  eat:
+    - props : object:eat
+      actor : "Le paquet de gateaux est vide."
+    - actor : "Vous mangez les gateaux"
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:eat
+---
+id: conserve-000
+type: Thing
+gender: fem
+name:
+  - conserve
+props:
+  - takable
+  - eatable
+events:
+  info:
+    actor:
+      - props: =conserve-000:eat
+        data : "La conserve est vide."
+      - data : "La conserve semble mangeable, pourquoi pas la manger."
+  look:
     actor: |
-      Vous appuyez sur le bouton, mais rien ne semble se
-      produire.
-    observer: |
-      {{ actor.name }} appuie sur le bouton, mais rien ne
-      semble se produire.
-    effects:
-      - type  : ChangePropEffect
-        modifs: =portal-ordinateur-cabane-exit-2:activated
-      - type  : NarrativeEffect
-        at    : =salle-22-000
-        key   : bouton-cabane
+      La conserve semble mangeable !
+  eat:
+    - props : object:eat
+      actor : "La conserve est vide."
+    - actor : "Vous mangez la conserve"
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:eat
 ---
 id: lampe-000
 type: Thing
@@ -429,3 +1204,542 @@ events:
       effects:
         - type  : ChangePropEffect
           modifs: -object:light-on
+---
+id: lettre-000
+type: Thing
+name: lettre
+gender: fem
+events:
+  info:
+    actor: "Une lettre."
+  look:
+    actor: |
+      Sur cette lettre est écrit: [...] attaque [...] zombie [...] fuir ou combatre ...
+---
+id: sac-000
+type: Thing
+name: sac
+props:
+  - takable
+events:
+  info:
+    actor: "Un sac à dos !"
+  look:
+    actor: |
+      C'est un très bon sac, il peut contenir beaucoup de choses !
+---
+# A COMPLETER ############################################################################################
+id: couteau-000
+type: Thing
+name: couteau
+props:
+  - takable
+events:
+  info:
+    actor: "Un couteau !"
+  look:
+    actor: |
+      C'est un très bon couteau !
+---
+id: hache-000
+type: Thing
+name: hache
+props:
+  - takable
+events:
+  info:
+    actor: "Un hache !"
+  look:
+    actor: |
+      Elle peut servir, prenez la !
+---
+id: matraque-000
+type: Thing
+name: matraque
+props:
+  - takable
+events:
+  info:
+    actor: "Une matraque de policier !"
+  look:
+    actor: |
+      Elle peut servir, prenez la !
+---
+id: piedbiche-000
+type: Thing
+name:
+  - pied de biche
+  - piedbiche
+props:
+  - takable
+events:
+  info:
+    actor: "Un pied de biche !"
+  look:
+    actor: |
+      Il peut servir, prenez la !
+---
+id: clef-000
+type: Thing
+name: clef
+props:
+  - takable
+  - key-for-voiture-000
+events:
+  info:
+    actor: "Une clef de voiture."
+  look:
+    actor: |
+      C'est une clef de voiture.
+---
+id: jouet-000
+type: Thing
+name: jouet
+props:
+  - takable
+events:
+  info:
+    actor: "Un jouet d'enfant."
+  look:
+    actor: |
+      C'est un jouet d'enfant.
+---
+id: essence-000
+type: Thing
+name:
+  - bidon
+  - essence
+props:
+  - takable
+events:
+  info:
+    actor: "Un bidon d'essence."
+  look:
+    actor: |
+      C'est un bidon d'essence.
+---
+id: medikit-000
+type: Thing
+name:
+  - soin
+  - medikit
+props:
+  - takable
+events:
+  info:
+    actor: "Un medikit."
+  look:
+    actor: |
+      C'est un medikit, il contient quelques soins.
+---
+id: pistolet-000
+type: Thing
+name:
+  - pistolet
+props:
+  - takable
+  - shootable
+events:
+  info:
+    actor: "Un pistolet."
+  look:
+    actor: |
+      C'est un pistolet de policier, il contient encore des balles.
+  shoot:
+    - props : object:shoot
+      actor : "Le chargeur est vide."
+    - actor : "Vous tirez avec l'arme."
+      observer: |
+        {{ actor.name }} tire avec une arme.
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:haveshoot
+---
+id: pompe-000
+type: Thing
+name:
+  - pompe
+  - fusil a pompe
+props:
+  - takable
+  - shootable
+events:
+  info:
+    actor: "Un fusil a pompe !!"
+  look:
+    actor: |
+      C'est un fusil à pompes, il contient encore des balles.
+  shoot:
+    - props : object:shoot
+      actor : "Le chargeur est vide."
+    - actor : "Vous tirez avec l'arme."
+      observer: |
+        {{ actor.name }} tire avec une arme.
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:haveshoot
+---
+id: fusil-000
+type: Thing
+name:
+  - m4
+  - fusil
+  - fusil d'assault
+props:
+  - takable
+  - shootable
+events:
+  info:
+    actor: "Un m4 !!"
+  look:
+    actor: |
+      C'est un fusil d'assault, il contient encore des balles.
+  shoot:
+    - props : object:shoot
+      actor : "Le chargeur est vide."
+    - actor : "Vous tirez avec l'arme."
+      observer: |
+        {{ actor.name }} tire avec une arme.
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:haveshoot
+---
+id: zombie
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie1
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie1:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie1)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie2
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie2:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie2)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie3
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie3:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie3)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie4
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie4:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie4)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie5
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie5:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie5)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie6
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie6:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie6)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie7
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie7:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie7)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie8
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie8:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie8)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie9
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie9:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie9)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie10
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie10:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie10)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: zombie83
+type: Thing
+name:
+  - zombie
+props:
+  - shootable-with
+events:
+  info:
+    actor:
+      - props: =zombie83:shot
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie83)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  shoot-with:
+    - props : object:shootable-with
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:shot
+---
+id: humains-000
+type: Thing
+name:
+  - homme
+  - mec
+  - personne
+  - etranger
+props:
+  - killable
+events:
+  info:
+    actor:
+      - props: =humains-000:kill
+        data : "La personne est déjà morte."
+      - data : "C'est un survivant, on peut le sauver en tuant les zombie qui tentent de le manger..."
+  look:
+    actor: |
+      Cette personne semble être en danger !
+  drink:
+    - props : object:kill
+      actor : "La personne est déjà morte."
+    - actor : "Vous tuez le survivant."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: voiture-000
+type: Thing
+name:
+  - voiture
+props:
+  - takable
+events:
+  info:
+    actor:
+      - props: =voiture-000:take
+        data : "Le zombie est déjà mort."
+      - data : "C'est un zombie, on peut le tuer avec une arme léthale."
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  drink:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---

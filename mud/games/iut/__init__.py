@@ -4,9 +4,9 @@
 
 from mud.actions import (
     GoAction, TakeAction, LookAction, InspectAction, OpenAction,
-    OpenWithAction, CloseAction, TypeAction, InventoryAction,
-    LightOnAction, LightOffAction, DropAction, DropInAction,
-    PushAction, TeleportAction, EnterAction, LeaveAction,
+    OpenWithAction, CloseAction, TypeAction, InventoryAction, ShootAction, ShootWithAction,
+    LightOnAction, LightOffAction, DropAction, DropInAction, DrinkAction, EatAction,
+    PushAction, TeleportAction, EnterAction, LeaveAction, LightWithAction, PlayWithAction
 )
 
 import mud.game
@@ -20,7 +20,10 @@ def make_rules():
 
     return (
         (GoAction       , r"(?:aller |)(%s)" % "|".join(DIRS)),
+        (LightWithAction, r"allumer %s(\S+) avec %s(\w+)" % (DETS,DETS)),
         (TakeAction     , r"(?:p|prendre) %s(\S+)" % DETS),
+        (DrinkAction    , r"(?:b|boire) %s(\S+)" % DETS),
+        (EatAction      , r"(?:m|manger) %s(\S+)" % DETS),
         (LookAction     , r"(?:r|regarder)"),
         (InspectAction  , r"(?:r|regarder|lire|inspecter|observer) %s(\S+)" % DETS),
         (OpenAction     , r"ouvrir %s(\S+)" % DETS),
@@ -33,6 +36,9 @@ def make_rules():
         (DropAction     , r"(?:poser|laisser) %s(\S+)" % DETS),
         (DropInAction   , r"(?:poser|laisser) %s(\S+) (?:dans |sur |)%s(\S+)" % (DETS,DETS)),
         (PushAction     , r"(?:appuyer|pousser|presser)(?: sur|) %s(\S+)" % DETS),
+        (ShootAction    , r"(?:tirer|t)(?: avec|) %s(\S+)" % DETS),
+        (PlayWithAction , r"jouer %s(\S+) avec %s(\w+)" % (DETS,DETS)),
+        (ShootWithAction, r"tuer %s(\S+) avec %s(\w+)" % (DETS,DETS)),
         (TeleportAction , r"tele(?:porter|) (\S+)"),
         (EnterAction    , r"entrer"),
         (LeaveAction    , r"sortir|partir"),

@@ -54,6 +54,9 @@ directions:
     bas       : en bas
 
 events:
+  boire-eau:
+    observer : "Vous buvez l'eau ! "
+
   enter-portal:
     observer  : "{{ actor.name }} sort par {{ exit.the_direction() }}."
     failed:
@@ -96,13 +99,21 @@ events:
   light-off:
     - props   : -object:lightable
       actor   : "{{ object.noun_the() }} n'est pas allumable, donc pas éteignable."
-    - props   : -object:light-on
+    - props   : -object:light-off
       actor   : "{{ object.noun_the() }} est déjà éteint{{ object.noun_e() }}"
     - actor   : "Vous éteignez {{ object.noun_the() }}."
       observer: "{{ actor.name }} éteind {{ object.noun_his() }}."
       effects :
         - type  : ChangePropEffect
-          modifs: -object:light-on
+          modifs: -object:light-off
+
+  light-with:
+    - props   : object:lightable-with
+      actor   : "{{ object.noun_the() }} est déjà allumé{{ object.noun_e() }}"
+    - actor   : "Vous allumez {{ object.noun_the() }}."
+      effects :
+        - type  : ChangePropEffect
+          modifs: object:light-with
 
   inventory:
     empty: "Votre inventaire est vide."
@@ -185,6 +196,26 @@ events:
         Vous appuyez futilement sur {{ object.noun_the() }}
       observer: |
         {{ actor.name }} appuie futilement sur {{ object.noun_the() }}
+  eat:
+    failed:
+      actor: |
+        Vous n'avez plus rien à manger...
+
+  shoot:
+    failed:
+      actor: |
+        Ce n'est pas une arme...
+      observer: |
+        {{ actor.name }} appuie futilement sur la détente de {{ object.noun_the() }}
+
+  shoot-with:
+    - props   : object:shootable-with
+      actor   : "{{ object.noun_the() }} est déjà mort."
+    - actor   : "Vous tuez {{ object.noun_the() }}."
+      effects :
+        - type  : ChangePropEffect
+          modifs: object:shot
+
 
   close:
     - props: -object:closable
@@ -240,4 +271,3 @@ events:
   shared-props:
     - closed
     - closable
-
