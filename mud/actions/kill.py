@@ -5,13 +5,13 @@
 from .action import Action2, Action3
 from mud.events import KillEvent, KillWithEvent
 
-class ShootAction(Action2):
+class KillAction(Action2):
     EVENT = KillEvent
     RESOLVE_OBJECT = "resolve_for_operate"
-    ACTION = "shoot"
+    ACTION = "kill"
 
-class ShootWithAction(Action3):
-    EVENT = ShootWithEvent
+class KillWithAction(Action3):
+    EVENT = KillWithEvent
     ACTION = "shoot-with"
     RESOLVE_OBJECT = "resolve_for_operate"
     RESOLVE_OBJECT2 = "resolve_for_use"

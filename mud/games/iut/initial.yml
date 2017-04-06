@@ -1409,311 +1409,416 @@ type: Thing
 name:
   - zombie
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie:shot
+      - props: =zombie:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie1
 type: Thing
 name:
-  - zombie
+  - zombie1
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie1:shot
+      - props: =zombie1:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie1)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie2
 type: Thing
 name:
-  - zombie
+  - zombie2
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie2:shot
+      - props: =zombie2:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie2)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie3
 type: Thing
 name:
-  - zombie
+  - zombie3
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie3:shot
+      - props: =zombie3:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie3)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie4
 type: Thing
 name:
-  - zombie
+  - zombie4
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie4:shot
+      - props: =zombie4:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie4)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie5
 type: Thing
 name:
-  - zombie
+  - zombie5
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie5:shot
+      - props: =zombie5:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie5)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie6
 type: Thing
 name:
-  - zombie
+  - zombie6
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie6:shot
+      - props: =zombie6:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie6)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie7
 type: Thing
 name:
-  - zombie
+  - zombie7
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie7:shot
+      - props: =zombie7:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie7)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie8
 type: Thing
 name:
-  - zombie
+  - zombie8
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie8:shot
+      - props: =zombie8:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie8)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie9
 type: Thing
 name:
-  - zombie
+  - zombie9
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie9:shot
+      - props: =zombie9:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie9)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie10
 type: Thing
 name:
-  - zombie
+  - zombie10
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie10:shot
+      - props: =zombie10:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie10)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: zombie83
 type: Thing
 name:
-  - zombie
+  - zombie83
 props:
-  - shootable-with
+  - killable
+  - killable-with
 events:
   info:
     actor:
-      - props: =zombie83:shot
+      - props: =zombie83:kill
         data : "Le zombie est déjà mort."
       - data : "Un zombie ! (zombie83)"
   look:
     actor: |
       Cette personne semble être devenue un zombie.. !
-  shoot-with:
-    - props : object:shootable-with
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
       observer:
       effects:
         - type  : ChangePropEffect
-          modifs: object:shot
+          modifs: object:kill
 ---
 id: humains-000
 type: Thing
 name:
+  - survivant
   - homme
   - mec
   - personne
   - etranger
 props:
   - killable
+  - killable-with
 events:
   info:
     actor:
       - props: =humains-000:kill
-        data : "La personne est déjà morte."
-      - data : "C'est un survivant, on peut le sauver en tuant les zombie qui tentent de le manger..."
+        data : "Le survivant est mort."
+      - data : "Un survivant !"
   look:
     actor: |
-      Cette personne semble être en danger !
-  drink:
+      Cette personne semble être en danger, des zombies tentent de le manger.. !
+  kill :
     - props : object:kill
-      actor : "La personne est déjà morte."
-    - actor : "Vous tuez le survivant."
+      actor : "Le survivant est déjà mort."
+    - actor : "Vous tentez de tuer le survivant sans rien, il se retourne, vous tire sa derniere balle dans la tête et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le survivant est déjà mort."
+    - actor : "Vous tuez le survivant. Quel monstre êtes vous devenu ? Mon dieu........................."
       observer:
       effects:
         - type  : ChangePropEffect

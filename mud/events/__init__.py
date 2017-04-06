@@ -16,7 +16,8 @@ from .inventory    import InventoryEvent
 from .info         import InfoEvent
 from .drop         import DropEvent, DropInEvent
 from .push         import PushEvent
-from .shoot        import ShootEvent, ShootWithEvent
+from .shoot        import ShootEvent
+from .kill         import KillEvent, KillWithEvent
 from .reset        import ResetEvent
 from .deadaction   import DeadAction
 from .teleport     import TeleportEvent

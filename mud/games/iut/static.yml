@@ -1,4 +1,4 @@
-start: parking-000
+start: maison-000
 directions:
   normalized:
     nord      : nord
@@ -207,8 +207,14 @@ events:
         Ce n'est pas une arme...
       observer: |
         {{ actor.name }} appuie futilement sur la détente de {{ object.noun_the() }}
+  kill:
+    failed:
+      actor: |
+        Ce n'est pas une arme...
+      observer: |
+        {{ actor.name }} tue sans pression le {{ object.noun_the() }}
 
-  shoot-with:
+  kill-with:
     - props   : object:shootable-with
       actor   : "{{ object.noun_the() }} est déjà mort."
     - actor   : "Vous tuez {{ object.noun_the() }}."

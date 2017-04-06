@@ -4,9 +4,10 @@
 
 from mud.actions import (
     GoAction, TakeAction, LookAction, InspectAction, OpenAction,
-    OpenWithAction, CloseAction, TypeAction, InventoryAction, ShootAction, ShootWithAction,
+    OpenWithAction, CloseAction, TypeAction, InventoryAction, ShootAction,
     LightOnAction, LightOffAction, DropAction, DropInAction, DrinkAction, EatAction,
-    PushAction, TeleportAction, EnterAction, LeaveAction, LightWithAction, PlayWithAction
+    PushAction, TeleportAction, EnterAction, LeaveAction, LightWithAction, PlayWithAction,
+    KillAction, KillWithAction
 )
 
 import mud.game
@@ -38,7 +39,8 @@ def make_rules():
         (PushAction     , r"(?:appuyer|pousser|presser)(?: sur|) %s(\S+)" % DETS),
         (ShootAction    , r"(?:tirer|t)(?: avec|) %s(\S+)" % DETS),
         (PlayWithAction , r"jouer %s(\S+) avec %s(\w+)" % (DETS,DETS)),
-        (ShootWithAction, r"tuer %s(\S+) avec %s(\w+)" % (DETS,DETS)),
+        (KillAction     , r"(?:tuer|t)(?: le|) %s(\S+)" % DETS),
+        (KillWithAction , r"tuer %s(\S+) avec %s(\w+)" % (DETS,DETS)),
         (TeleportAction , r"tele(?:porter|) (\S+)"),
         (EnterAction    , r"entrer"),
         (LeaveAction    , r"sortir|partir"),
