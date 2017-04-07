@@ -1,0 +1,797 @@
+# ###########################################################################################################
+# TOUTES LES OBJETS
+# ###########################################################################################################
+---
+id: eau-000
+type: Thing
+gender: fem
+name:
+  - eau
+  - bouteille
+props:
+  - takable
+  - drinkable
+events:
+  info:
+    actor:
+      - props: =eau-000:drink
+        data : "La bouteille est vide."
+      - data : "Cette eau semble potable, pourquoi pas la boire."
+  look:
+    actor: |
+      Cette eau semble potable !
+  drink:
+    - props : object:drink
+      actor : "La bouteille est vide."
+    - actor : "Vous buvez l'eau."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:drink
+---
+id: eau-001
+type: Thing
+gender: fem
+name:
+  - eau
+  - bouteille
+props:
+  - takable
+  - drinkable
+events:
+  info:
+    actor:
+      - props: =eau-001:drink
+        data : "La bouteille est vide."
+      - data : "Cette eau semble potable, pourquoi pas la boire."
+  look:
+    actor: |
+      Cette eau semble potable !
+  drink:
+    - props : object:drink
+      actor : "La bouteille est vide."
+    - actor : "Vous buvez l'eau."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:drink
+---
+id: gateaux-000
+type: Thing
+name:
+  - gateaux
+  - biscuits
+props:
+  - takable
+  - eatable
+events:
+  info:
+    actor:
+      - props: =gateaux-000:eat
+        data : "Le paquet de gateaux est vide."
+      - data : "Les gateaux semblent mangeables, pourquoi pas les manger."
+  look:
+    actor: |
+      Les gateaux semblent mangeables !
+  eat:
+    - props : object:eat
+      actor : "Le paquet de gateaux est vide."
+    - actor : "Vous mangez les gateaux"
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:eat
+---
+id: conserve-000
+type: Thing
+gender: fem
+name:
+  - conserve
+props:
+  - takable
+  - eatable
+events:
+  info:
+    actor:
+      - props: =conserve-000:eat
+        data : "La conserve est vide."
+      - data : "La conserve semble mangeable, pourquoi pas la manger."
+  look:
+    actor: |
+      La conserve semble mangeable !
+  eat:
+    - props : object:eat
+      actor : "La conserve est vide."
+    - actor : "Vous mangez la conserve"
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:eat
+---
+id: lampe-000
+type: Thing
+props:
+  - lightable
+  - takable
+names   :
+  - lampe
+  - torche
+  - lampe-torche
+gender: fem
+events:
+  info:
+    actor:
+      - props: =lampe-000:light-on
+        data : "Une lampe-torche allumée."
+      - data : "Une lampe-torche éteinte."
+  look:
+    actor:
+      - props: object:light-on
+        data : "Une lampe-torche allumée."
+      - data : "Une lampe-torche éteinte."
+  light-on:
+    - props : object:light-on
+      actor : "La lampe est déjà allumée."
+    - actor : "Vous allumez votre lampe-torche."
+      observer: |
+        {{ actor.name }} allume sa lampe-torche.
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:light-on
+  light-off:
+    - props : -object:light-on
+      actor : "La lampe est déjà éteinte."
+    - actor : "Vous éteignez votre lampe-torche."
+      observer: |
+        {{ actor.name }} éteind sa lampe-torche.
+      effects:
+        - type  : ChangePropEffect
+          modifs: -object:light-on
+---
+id: lettre-000
+type: Thing
+name: lettre
+gender: fem
+events:
+  info:
+    actor: "Une lettre."
+  look:
+    actor: |
+      Sur cette lettre est écrit: [...] attaque [...] zombie [...] fuir ou combatre ...
+---
+id: sac-000
+type: Thing
+name: sac
+props:
+  - takable
+events:
+  info:
+    actor: "Un sac à dos !"
+  look:
+    actor: |
+      C'est un très bon sac, il peut contenir beaucoup de choses !
+---
+# A COMPLETER ############################################################################################
+id: couteau-000
+type: Thing
+name: couteau
+props:
+  - takable
+  - shootable
+events:
+  info:
+    actor: "Un couteau !"
+  look:
+    actor: |
+      C'est un très bon couteau !
+---
+id: hache-000
+type: Thing
+name: hache
+props:
+  - takable
+  - shootable
+events:
+  info:
+    actor: "Un hache !"
+  look:
+    actor: |
+      Elle peut servir, prenez la !
+---
+id: matraque-000
+type: Thing
+name: matraque
+props:
+  - takable
+  - shootable
+events:
+  info:
+    actor: "Une matraque de policier !"
+  look:
+    actor: |
+      Elle peut servir, prenez la !
+---
+id: piedbiche-000
+type: Thing
+name:
+  - pied de biche
+  - piedbiche
+props:
+  - takable
+  - shootable
+events:
+  info:
+    actor: "Un pied de biche !"
+  look:
+    actor: |
+      Il peut servir, prenez la !
+---
+id: clef-000
+type: Thing
+name: clef
+props:
+  - takable
+  - key-for-voiture-000
+events:
+  info:
+    actor: "Une clef de voiture."
+  look:
+    actor: |
+      C'est une clef de voiture.
+---
+id: jouet-000
+type: Thing
+name: jouet
+props:
+  - takable
+events:
+  info:
+    actor: "Un jouet d'enfant."
+  look:
+    actor: |
+      C'est un jouet d'enfant.
+---
+id: essence-000
+type: Thing
+name:
+  - bidon
+  - essence
+props:
+  - takable
+events:
+  info:
+    actor: "Un bidon d'essence."
+  look:
+    actor: |
+      C'est un bidon d'essence.
+---
+id: medikit-000
+type: Thing
+name:
+  - soin
+  - medikit
+props:
+  - takable
+events:
+  info:
+    actor: "Un medikit."
+  look:
+    actor: |
+      C'est un medikit, il contient quelques soins.
+---
+id: pistolet-000
+type: Thing
+name:
+  - pistolet
+props:
+  - takable
+  - shootable
+events:
+  info:
+    actor: "Un pistolet."
+  look:
+    actor: |
+      C'est un pistolet de policier, il contient encore des balles.
+  shoot:
+    - props : object:shoot
+      actor : "Le chargeur est vide."
+    - actor : "Vous tirez avec l'arme."
+      observer: |
+        {{ actor.name }} tire avec une arme.
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:haveshoot
+---
+id: pompe-000
+type: Thing
+name:
+  - pompe
+  - fusil a pompe
+props:
+  - takable
+  - shootable
+events:
+  info:
+    actor: "Un fusil a pompe !!"
+  look:
+    actor: |
+      C'est un fusil à pompes, il contient encore des balles.
+  shoot:
+    - props : object:shoot
+      actor : "Le chargeur est vide."
+    - actor : "Vous tirez avec l'arme."
+      observer: |
+        {{ actor.name }} tire avec une arme.
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:haveshoot
+---
+id: fusil-000
+type: Thing
+name:
+  - m4
+  - fusil
+  - fusil d'assault
+props:
+  - takable
+  - shootable
+events:
+  info:
+    actor: "Un m4 !!"
+  look:
+    actor: |
+      C'est un fusil d'assault, il contient encore des balles.
+  shoot:
+    - props : object:shoot
+      actor : "Le chargeur est vide."
+    - actor : "Vous tirez avec l'arme."
+      observer: |
+        {{ actor.name }} tire avec une arme.
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:haveshoot
+---
+id: zombie
+type: Thing
+name:
+  - zombie
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie1
+type: Thing
+name:
+  - zombie1
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie1:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie1)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie2
+type: Thing
+name:
+  - zombie2
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie2:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie2)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie3
+type: Thing
+name:
+  - zombie3
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie3:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie3)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie4
+type: Thing
+name:
+  - zombie4
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie4:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie4)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie5
+type: Thing
+name:
+  - zombie5
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie5:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie5)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie6
+type: Thing
+name:
+  - zombie6
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie6:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie6)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie7
+type: Thing
+name:
+  - zombie7
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie7:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie7)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie8
+type: Thing
+name:
+  - zombie8
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie8:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie8)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie9
+type: Thing
+name:
+  - zombie9
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie9:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie9)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie10
+type: Thing
+name:
+  - zombie10
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie10:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie10)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: zombie83
+type: Thing
+name:
+  - zombie83
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =zombie83:kill
+        data : "Le zombie est déjà mort."
+      - data : "Un zombie ! (zombie83)"
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  kill :
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tentez de tuer le zombie sans rien, il se retourne, vous giffle et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: humains-000
+type: Thing
+name:
+  - survivant
+  - homme
+  - mec
+  - personne
+  - etranger
+props:
+  - killable
+  - killable-with
+events:
+  info:
+    actor:
+      - props: =humains-000:kill
+        data : "Le survivant est mort."
+      - data : "Un survivant !"
+  look:
+    actor: |
+      Cette personne semble être en danger, des zombies tentent de le manger.. !
+  kill :
+    - props : object:kill
+      actor : "Le survivant est déjà mort."
+    - actor : "Vous tentez de tuer le survivant sans rien, il se retourne, vous tire sa derniere balle dans la tête et vous mourrez..."
+      observer:
+      effects:
+        - type  : DeathEffect
+  kill-with:
+    - props : object:kill
+      actor : "Le survivant est déjà mort."
+    - actor : "Vous tuez le survivant. Quel monstre êtes vous devenu ? Mon dieu........................."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---
+id: voiture-000
+type: Thing
+name:
+  - voiture
+props:
+  - takable
+events:
+  info:
+    actor:
+      - props: =voiture-000:take
+        data : "Le zombie est déjà mort."
+      - data : "C'est un zombie, on peut le tuer avec une arme léthale."
+  look:
+    actor: |
+      Cette personne semble être devenue un zombie.. !
+  drink:
+    - props : object:kill
+      actor : "Le zombie est déjà mort."
+    - actor : "Vous tuez le zombie."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:kill
+---

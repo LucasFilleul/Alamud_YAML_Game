@@ -1,0 +1,372 @@
+# ###########################################################################################################
+# TOUTES LES LOCATIONS
+# ###########################################################################################################
+---
+id: maison-000
+type: Location
+contains:
+  - lampe-000
+  - couteau-000
+  - gateaux-000
+  - eau-000
+  - sac-000
+events:
+  info:
+    actor: "Notre maison !"
+  look:
+    actor: |
+      Vous vous reveillez dans votre salon. Tout semble bizarrement calme. Vous decidez de sortir.
+      Mais avant cela, pourquoi pas prendre quelques affaires. Au nord se trouve la sortie.
+---
+id: rue-000
+type: Location
+contains:
+  - matraque-000
+  - pistolet-000
+  - lettre-000
+events:
+  info:
+    actor: "Vous êtes dans la rue ! "
+  look:
+    actor: |
+      Vous êtes dans la rue. L'ambiance est chaotique. La rue est vide, une voiture de police est accidentée près de vous.
+      La rue continue à l'est vers le centre commercial, à l'ouest vers les résidences et au nord se trouve le manoir de la ville. Votre maison est au sud.
+---
+id: rue-001
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. La rue continue à l'est vers le centre commercial, à l'ouest vers les résidences.
+      Au nord se trouve le jardin du palais et au sud le magasin d'armes fermé.
+---
+id: rue-002
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. A l'ouest, la rue continue vers les résidences et à l'est vous entrez dans le Centre Commercial.
+      Au nord la rue va vers un parking.
+---
+id: rue-012
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. Au sud la rue continue vers le centre commercial et les résidences.
+      A l'est, la rue continue vers le parking.
+---
+id: rue-013
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. A l'ouest la rue continue vers le centre commercial et les résidences.
+      Au nord, la rue continue vers le parking.
+---
+id: rue-014
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. Au sud la rue continue vers le centre commercial, à l'est se trouve un parking.
+---
+id: parking-000
+type: Location
+contains:
+  - voiture-000
+events:
+  info:
+    actor: "Vous êtes sur le parking."
+  look:
+    actor: |
+      Vous êtes sur le parking. A l'est vous revennez sur vos pas.  Il y a une voiture garée.
+---
+id: rue-005
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. A l'ouest la rue se dirige vers le centre commercial et le parking.
+      Au sud vous continuez vers les résidences.
+      Au nord se trouve le jardin du palais.
+---
+id: rue-006
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. A l'ouest vous arrivez près les résidences.
+      Au sud vous arrivez près du viel immeuble de la ville.
+      Au nord vous revenez vers votre maison et en direction du centre commercial.
+---
+id: rue-007
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. A l'est se trouve la porte d'entrée de l'immeuble.
+      Au nord vous revenez vers les résidences.
+---
+id: rue-008
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue.
+      A l'est vous continuez la rue.
+      A l'ouest vous revenez vers les résidences.
+      Au sud se trouve l'entrée de immeuble.
+---
+id: rue-009
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue.
+      A l'ouest vous revenez vers les résidences.
+      Au sud vous continuez sur la rue.
+---
+id: rue-010
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue.
+      Au nord vous revenez vers les résidences.
+      Au sud vous continuez sur la rue.
+---
+id: rue-011
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue. Au nord vous revennez sur vos pas.
+      La route au sud semble être impossible à prendre.
+---
+id: rue-015
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue mais vous semblez entendre quelqu'un appeler à l'aide.
+      Au sud se trouve une maison qui semble ouverte mais vous entendez des bruits étrange en sortir.
+      A l'ouest vous continuez dans le quatier des résidences.
+      A l'est vous sortez du quartier.
+---
+id: rue-016
+type: Location
+events:
+  info:
+    actor: "Vous êtes dans la rue."
+  look:
+    actor: |
+      La rue est vide. Toujours personne en vue mais vous entendez clairement quelqu'un appeler à l'aide.
+      Au sud se trouve la maison d'où provient les cris.
+      A l'est vous vous dirigez vers la sortie du quartier.
+---
+id: maison-001
+type: Location
+props:
+  - dark
+contains:
+  - piedbiche-000
+  - conserve-000
+  - eau-001
+  - zombie
+events:
+  info:
+    actor: "La maison est plongée dans le noir. Vous entendez quelques bruits byzarre."
+  look:
+    actor: |
+      Contre le mur se trouve un zombie. Il n'a pas l'air de vous avoir vu.
+      Au sud vous revennez sur vos pas.
+---
+id: maison-002
+type: Location
+contains:
+  - humains-000
+  - zombie1
+  - zombie2
+  - clef-000
+events:
+  info:
+    actor: "Vous arrivez près de la maison où vous avez entendu les cris."
+  look:
+    actor: |
+      Vous voyez la personne en difficultée face à deux zombie.
+      L'un d'eux vous a vu. Deux options : fuir ou se battre !
+      Au nord, vous retournez sur vos pas.
+---
+id: immeuble-000
+type: Location
+contains:
+  - zombie3
+  - zombie4
+  - zombie5
+  - zombie6
+  - zombie7
+events:
+  info:
+    actor: "Vous entrez dans l'immeuble."
+  look:
+    actor: |
+      Vous voyez plusieurs zombie, impossible de les compter. Si jamais vous tirez, les autres risqueraient de vous entendre.
+      Au nord vous retournez dans la rue.
+---
+id: immeuble-001
+type: Location
+contains:
+  - zombie8
+  - zombie9
+  - zombie10
+events:
+  info:
+    actor: "Vous continuez dans l'immeuble."
+  look:
+    actor: |
+      Vous voyez plusieurs zombies, trois au total.
+      A l'est vous retournez dans l'entrée, au sud vous continuez dans l'immeuble.
+---
+id: immeuble-002
+type: Location
+events:
+  info:
+    actor: "Vous continuez dans l'immeuble."
+  look:
+    actor: |
+      Vous ne voyez pas zombies cette fois. Vous voyez un escalier mais il semble inutilisable.
+      Au nord vous retournez vers l'entrée, à l'est vous continuez dans l'immeuble.
+---
+id: immeuble-003
+type: Location
+contains:
+  - zombie83
+  - pompe-000
+events:
+  info:
+    actor: "Vous continuez dans l'immeuble."
+  look:
+    actor: |
+      Un zombie se trouve au milieu de la pièce. Un fusil à pompe semble être à ses pieds...
+      Pas moyen de le prendre sans se faire remarquer.
+      A l'ouest vous retournez vers l'entrée.
+---
+id: jardin-000
+type: Location
+contains:
+  - jouet-000
+events:
+  info:
+    actor: "Vous arrivez sur le jardin ouest du manoir."
+  look:
+    actor: |
+      Au sud vous retournez sur la rue.
+---
+id: jardin-001
+type: Location
+contains:
+  - hache-000
+events:
+  info:
+    actor: "Vous arrivez sur le jardin est du manoir."
+  look:
+    actor: |
+      Au sud vous retournez sur la rue.
+---
+id: allee-000
+type: Location
+contains:
+  - essence-000
+events:
+  info:
+    actor: "Vous arrivez dans l'allée du manoir."
+  look:
+    actor: |
+      Au sud vous retournez sur la rue.
+---
+id: cc-000
+type: Location
+
+events:
+  info:
+    actor: "Vous arrivez dans le centre commercial."
+  look:
+    actor: |
+      Au sud vous continuez dans le centre. A l'ouest vous retournez sur la rue.
+---
+id: cc-001
+type: Location
+events:
+  info:
+    actor: "Vous continuez dans le centre commercial."
+  look:
+    actor: |
+      Un zombie semble être bloqué dans un des magasins mais il ne posera pas de problèmes.
+      Au sud vous continuez dans le centre. Au nord vous retournez vers l'entrée.
+---
+id: cc-002
+type: Location
+events:
+  info:
+    actor: "Vous continuez dans le centre commercial."
+  look:
+    actor: |
+      Au sud la route semble être bloquée. Au nord vous retournez vers l'entrée. Une bouche d'égout semble donner sur un tunnel.
+---
+id: tunnel-000
+type: Location
+events:
+  info:
+    actor: "Vous êtes à l'entrée du tunnel."
+  look:
+    actor: |
+      A l'ouest le tunnel continue. L'échelle vous ramène dans le centre commercial.
+---
+id: tunnel-001
+type: Location
+events:
+  info:
+    actor: "Vous continuez dans le tunnel."
+  look:
+    actor: |
+      A l'ouest le tunnel semble être bouché. A l'est vous revenez vers l'échelle.
+      Il semble y avoir un passage au dessus de vous.
+---
+id: magasin-000
+type: Location
+contains:
+  - fusil-000
+  - medikit-000
+events:
+  info:
+    actor: "Vous arrivez dans le magasin d'armes."
+  look:
+    actor: |
+      Le magasin semble être inhabité. Regardons ce qu'il y a.

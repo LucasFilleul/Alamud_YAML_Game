@@ -1,0 +1,685 @@
+# ###########################################################################################################
+# TOUS LES PORTALS
+# ###########################################################################################################
+---
+id: maison-000-portal1
+type: Portal
+exits:
+  - id: maison-000-nord
+    location: maison-000
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous sortez de la maison ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-000-sud
+    location: rue-000
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans la maison."
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-000-portal2
+type: Portal
+exits:
+  - id: rue-000-ouest
+    location: rue-000
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-005-est
+    location: rue-005
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-000-portal3
+type: Portal
+exits:
+  - id: rue-000-est
+    location: rue-000
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-001-ouest
+    location: rue-001
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-001-portal4
+type: Portal
+exits:
+  - id: rue-001-est
+    location: rue-001
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-002-ouest
+    location: rue-002
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-000-portal5
+type: Portal
+exits:
+  - id: rue-000-nord
+    location: rue-000
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous arrivez dans l'allé du manoir ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: allee-000-sud
+    location: allee-000
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-001-portal6
+type: Portal
+exits:
+  - id: rue-001-nord
+    location: rue-001
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous arrivez dans le jardin est du manoir ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: jardin-001-sud
+    location: jardin-001
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-005-portal7
+type: Portal
+exits:
+  - id: rue-005-nord
+    location: rue-005
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous arrivez dans le jardin ouest du manoir ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: jardin-000-sud
+    location: jardin-000
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-002-portal9
+type: Portal
+exits:
+  - id: rue-002-nord
+    location: rue-002
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-012-sud
+    location: rue-012
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-002-portal10
+type: Portal
+exits:
+  - id: rue-002-est
+    location: rue-002
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans le centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: cc-000-ouest
+    location: cc-000
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-012-portal11
+type: Portal
+exits:
+  - id: rue-012-est
+    location: rue-012
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-013-ouest
+    location: rue-013
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-013-portal12
+type: Portal
+exits:
+  - id: rue-013-nord
+    location: rue-013
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-014-sud
+    location: rue-014
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-014-portal13
+type: Portal
+exits:
+  - id: rue-014-ouest
+    location: rue-014
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans le parking ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: parking-000-est
+    location: parking-000
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: cc-000-portal14
+type: Portal
+exits:
+  - id: cc-000-sud
+    location: cc-000
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans le centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: cc-001-nord
+    location: cc-001
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revennez dans l'entrée du centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: cc-001-portal15
+type: Portal
+exits:
+  - id: cc-001-sud
+    location: cc-001
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans le centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: cc-002-nord
+    location: cc-002
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revennez dans l'entrée du centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-005-portal16
+type: Portal
+exits:
+  - id: rue-005-sud
+    location: rue-005
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-006-nord
+    location: rue-006
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-006-portal18
+type: Portal
+exits:
+  - id: rue-006-sud
+    location: rue-006
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-007-nord
+    location: rue-007
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-009-portal19
+type: Portal
+exits:
+  - id: rue-009-sud
+    location: rue-009
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-010-nord
+    location: rue-010
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-010-portal20
+type: Portal
+exits:
+  - id: rue-010-sud
+    location: rue-010
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-011-nord
+    location: rue-011
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-009-portal22
+type: Portal
+exits:
+  - id: rue-009-ouest
+    location: rue-009
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-008-est
+    location: rue-008
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-008-portal23
+type: Portal
+exits:
+  - id: rue-008-ouest
+    location: rue-008
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-007-est
+    location: rue-007
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-006-portal24
+type: Portal
+exits:
+  - id: rue-006-ouest
+    location: rue-006
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-015-est
+    location: rue-015
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-015-portal25
+type: Portal
+exits:
+  - id: rue-015-ouest
+    location: rue-015
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: rue-016-est
+    location: rue-016
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-015-portal26
+type: Portal
+exits:
+  - id: rue-015-sud
+    location: rue-015
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans une maison ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: maison-001-nord
+    location: maison-001
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-016-portal27
+type: Portal
+exits:
+  - id: rue-016-sud
+    location: rue-016
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans une maison ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: maison-002-nord
+    location: maison-002
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: rue-008-portal28
+type: Portal
+exits:
+  - id: rue-008-sud
+    location: rue-008
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: immeuble-000-nord
+    location: immeuble-000
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la rue ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: immeuble-000-portal29
+type: Portal
+exits:
+  - id: immeuble-000-ouest
+    location: immeuble-000
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: immeuble-001-est
+    location: immeuble-001
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: immeuble-001-portal30
+type: Portal
+exits:
+  - id: immeuble-001-sud
+    location: immeuble-001
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: immeuble-002-nord
+    location: immeuble-002
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: immeuble-002-portal31
+type: Portal
+exits:
+  - id: immeuble-002-est
+    location: immeuble-002
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: immeuble-003-ouest
+    location: immeuble-003
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans l'immeuble ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: cc-002-portal32
+type: Portal
+exits:
+  - id: cc-002-bas
+    location: cc-002
+    direction: bas
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans un tunnel ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: tunnel-000-haut
+    location: tunnel-000
+    direction: haut
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans le centre commercial ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: tunnel-000-portal33
+type: Portal
+exits:
+  - id: tunnel-000-ouest
+    location: tunnel-000
+    direction: ouest
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans un tunnel ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: tunnel-001-est
+    location: tunnel-001
+    direction: est
+    events:
+      enter-portal:
+        actor   : "Vous continuez dans un tunnel ! "
+        observer:
+      leave-portal:
+        observer:
+---
+id: tunnel-001-portal34
+type: Portal
+exits:
+  - id: tunnel-001-haut
+    location: tunnel-001
+    direction: haut
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans le magasin d'armes ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: magasin-000-bas
+    location: magasin-000
+    direction: bas
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans le tunnel !"
+        observer:
+      leave-portal:
+        observer:
