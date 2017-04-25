@@ -79,7 +79,9 @@ events:
     actor: "Vous êtes dans la rue."
   look:
     actor: |
-      La rue est vide. Toujours personne en vue. Au sud la rue continue vers le centre commercial, à l'est se trouve un parking.
+      La rue est vide. Toujours personne en vue.
+      Au sud la rue continue vers le centre commercial, à l'Ouest se trouve un parking.
+      Au nord, le portail de la ville semble être fermé!
 ---
 id: parking-000
 type: Location

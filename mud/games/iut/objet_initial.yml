@@ -224,20 +224,21 @@ events:
     actor: "Un pied de biche !"
   look:
     actor: |
-      Il peut servir, prenez la !
+      Il peut servir, prenez le !
 ---
 id: clef-000
 type: Thing
 name: clef
 props:
   - takable
-  - key-for-voiture-000
+  - key-for-portail-000
+gender: fem
 events:
   info:
-    actor: "Une clef de voiture."
+    actor: "La clef de la ville !"
   look:
     actor: |
-      C'est une clef de voiture.
+      C'est la clef de la ville qui ouvre le portail à coter du parking!
 ---
 id: jouet-000
 type: Thing
@@ -773,25 +774,12 @@ events:
 ---
 id: voiture-000
 type: Thing
-name:
-  - voiture
+name: voiture
 props:
   - takable
 events:
   info:
-    actor:
-      - props: =voiture-000:take
-        data : "Le zombie est déjà mort."
-      - data : "C'est un zombie, on peut le tuer avec une arme léthale."
+    actor: "Une voiture !"
   look:
     actor: |
-      Cette personne semble être devenue un zombie.. !
-  drink:
-    - props : object:kill
-      actor : "Le zombie est déjà mort."
-    - actor : "Vous tuez le zombie."
-      observer:
-      effects:
-        - type  : ChangePropEffect
-          modifs: object:kill
----
+      C'est un très bonne voiture mais elle semble inutilisable...

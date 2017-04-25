@@ -24,6 +24,48 @@ exits:
       leave-portal:
         observer:
 ---
+id: portal-ending
+type: Portal
+props:
+  - closed
+  - closable
+exits:
+  - id: portal-rue-014-nord
+    location: rue-014
+    direction: nord
+    name:
+      - portail
+    props:
+      - for-enter
+    events:
+      open-with :
+        - props   :
+            - portal:closed
+            - object2:key-for-portail-000
+          effects :
+            type  : ChangePropEffect
+            modifs:
+              - -portal:closed
+          actor   : |
+            Le portail s'ouvre.
+        - props   :
+            - portal:closed
+            - -object2:key-for-portail-000
+          actor   : |
+            Vous tentez vainement d'ouvrir le portail avec
+            {{ object2.noun_the() }}
+        - props   :
+            - portal:closed
+  - id: lieu-001
+    location: lieu-001
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous revenez sur vos pas ! "
+        observer:
+      leave-portal:
+        observer:
+---
 id: rue-000-portal2
 type: Portal
 exits:
