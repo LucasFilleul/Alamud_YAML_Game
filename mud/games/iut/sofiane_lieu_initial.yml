@@ -1,3 +1,4 @@
+---
 id: lieu-001
 type: Location
 contains:
@@ -79,8 +80,13 @@ id: lieu-005-ter
 type: Location
 events:
   info:
-    actor: "Douches publiques3"---
-
+    actor: "Douches publiques3"
+  look:
+    actor: |
+      Vous arrivez dans des douches pour femme. Le slender y était présent, il
+      vous attrape et vous tue violement, vous mourrez.
+---
+id: lieu-006
 type: Location
 events:
   info:
@@ -238,3 +244,4 @@ events:
   look:
     actor: |
       Pas de slender ici mais l'echelle, bravo ! Quelle culture !.
+---
