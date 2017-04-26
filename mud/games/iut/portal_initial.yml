@@ -56,7 +56,7 @@ exits:
             {{ object2.noun_the() }}
         - props   :
             - portal:closed
-  - id: lieu-001
+  - id: lieu-001-portal-end
     location: lieu-001
     direction: sud
     events:
