@@ -1,0 +1,247 @@
+---
+id: lieu-001
+type: Location
+contains:
+  - lampe-000
+events:
+  info:
+    actor: "Entrée du survival"
+  look:
+    actor: |
+      Vous vous réveillez dans une forêt durant la nuit que vous
+      ne connaissez pas, vous êtes terrifié. Vous ne voyez rien.
+      Vous vous demandez ce que vous faites ici. En regardant bien,
+      vous apercevez un objet à quelques metres de vous. Vous pouvez le prendre.
+---
+id: lieu-002
+type: Location
+contains:
+  - page-001
+events:
+  info:
+    actor: "Silo"
+  look:
+    actor: |
+      Ici se trouve un silo, vous voyez une page accrochée dessus. Sur cette
+      page est inscrit "Bienvenue dans ce survival, récoltez les 7 autres pages
+      et vous survivrez, trompez vous de direction et vous mourrerez ...". Au
+      nord, vous apercevez de grands rochers, au sud-ouest, vous revenez sur vos
+      pas.
+---
+id: lieu-003
+type: Location
+contains:
+  - page-002
+events:
+  info:
+    actor: "Rochers"
+  look:
+    actor: |
+      Ici se trouve de gros rochers, vous voyez une autre page accrochée dessus.
+      Sur cette page est inscrit "Bravo, vous avez trouver une seconde page ...
+      plus que 6 ...". A l'ouest, vous apercevez des tonneaux. Au nord, vous
+      n'apercevez que des arbres.
+---
+id: lieu-004
+type: Location
+contains:
+  - page-003
+events:
+  info:
+    actor: "Tonneaux"
+  look:
+    actor: |
+      Ici se trouve des tonneaux, en cherchant bien, vous apercevez une autre
+      page. Sur celle-ci est inscrit "Plus que 5, mais attention, je vais
+      essayer de vous empecher de les récuperer." A l'ouest, vous apercevez un
+      batiment.
+---
+id: lieu-005
+type: Location
+events:
+  info:
+    actor: "Douches publiques1"
+  look:
+    actor: |
+      Vous arrivez dans des douches publiques aux couloirs étroits... Au nord,
+      une douche pour femme, et au sud, pour homme...
+---
+id: lieu-005-bis
+type: Location
+events:
+  info:
+    actor: "Douches publiques2"
+  look:
+    actor: |
+      Vous arrivez dans des douches pour hommes. Il n'y a rien ici. Au sud,
+      vous revenez à l'entrée des douches.
+---
+id: lieu-005-ter
+type: Location
+events:
+  info:
+    actor: "Douches publiques3"
+  look:
+    actor: |
+      Vous arrivez dans des douches pour femme. Le slender y était présent, il
+      vous attrape et vous tue violement, vous mourrez.
+---
+id: lieu-006
+type: Location
+events:
+  info:
+    actor: "forêt"
+  look:
+    actor: |
+      Vous marchez dans la forêt, vous avez le sentiment d'être dans la bonne
+      direction.
+---
+id: lieu-007
+type: Location
+contains:
+  - page-004
+events:
+  info:
+    actor: "Croix"
+  look:
+    actor: |
+      Vous apercevez un batiment en forme de croix. Il y a une page dessus. Vous
+      pouvez la prendre. A l'ouest se trouvent 8 totems. Au nord-ouest, un tunnel
+      sombre.
+---
+id: lieu-008
+type: Location
+events:
+  info:
+    actor: "Totems"
+  look:
+    actor: |
+      Ici se trouvent des totems, malheureusement, slender se trouvaient derriere
+      l'un d'eux, il vous attrape et vous tue.
+---
+id: lieu-009
+type: Location
+contains:
+  - page-005
+events:
+  info:
+    actor: "Tunnel"
+  look:
+    actor: |
+      Ici se trouve un tunnel très sombre. En vous enfoncant dans ce dernier,
+      vous apercevez une page accrochée sur le coté gauche du tunnel. Vous décidez
+      de la prendre. Au sud, se trouve d'étranges totems. A l'ouest, de la forêt.
+---
+id: lieu-010
+type: Location
+events:
+  info:
+    actor: "foret2"
+  look:
+    actor: |
+      Il n'y a que des arbres ici.
+---
+id: lieu-011
+type: Location
+events:
+  info:
+    actor: "foret3"
+  look:
+    actor: |
+      Il n'y a que des arbres ici.
+---
+id: lieu-012
+type: Location
+contains:
+  - page-006
+events:
+  info:
+    actor: "Voiture bleu"
+  look:
+    actor: |
+      Vous apercevez une voiture bleue. En regardant sur le volant, vous
+      apercevez une page.
+---
+id: lieu-013
+type: Location
+events:
+  info:
+    actor: "foret2"
+  look:
+    actor: |
+      Il n'y a que des arbres ici.
+---
+id: lieu-014
+type: Location
+events:
+  info:
+    actor: "foret2"
+  look:
+    actor: |
+      Il n'y a que des arbres ici.
+---
+id: lieu-015
+type: Location
+contains:
+  - page-007
+events:
+  info:
+    actor: "Voiture rouge"
+  look:
+    actor: |
+      Vous apercevez une voiture rouge. Une page est accrochée dessus.
+---
+id: lieu-016
+type: Location
+events:
+  info:
+    actor: "foret2"
+  look:
+    actor: |
+      Il n'y a que des arbres ici.
+---
+id: lieu-017
+type: Location
+events:
+  info:
+    actor: "foret2"
+  look:
+    actor: |
+      Il n'y a que des arbres ici.
+---
+id: lieu-018
+type: Location
+events:
+  info:
+    actor: "foret2"
+  look:
+    actor: |
+      Il n'y a que des arbres ici.
+---
+id: lieu-019
+type: Location
+contains:
+  - page-008
+  - feuille-001
+events:
+  info:
+    actor: "Arbre magique"
+  look:
+    actor: |
+      Vous apercevez un arbre splendide. La page est accrochée sur une branche
+      en hauteur. Il vous faut une échelle pour y accéder. Néanmoins, il y a une
+      feuille accrochée à hauteur ou est inscrit "L'échelle se trouve dans une
+      direction qui a le même nom qu'une célèbre chanson de nino ferrer. Partout
+      ailleurs, le slender est présent."
+---
+id: lieu-020
+type: Location
+contains:
+  - echelle-001
+events:
+  info:
+    actor: "lieu magique"
+  look:
+    actor: |
+      Pas de slender ici mais l'echelle, bravo ! Quelle culture !.
+---

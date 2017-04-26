@@ -1,0 +1,230 @@
+---
+id: portal-lieu-001-tarace
+type: Portal
+exits:
+  - id: lieu-001-tarace-nord-est
+    location: lieu-001
+    direction: nord-est
+  - id: lieu-001-sud-ouest
+    location: lieu-002
+    direction: sud-ouest
+---
+id: portal-lieu-001
+type: Portal
+exits:
+  - id: lieu-001-nord
+    location: lieu-002
+    direction: nord
+  - id: lieu-002-sud
+    location: lieu-003
+    direction: sud
+---
+id: portal-lieu-002
+type: Portal
+exits:
+  - id: lieu-006-nord
+    location: lieu-005
+    direction: nord
+  - id: lieu-006-sud.
+    location: lieu-005-bis
+    direction: sud
+---
+id: portal-lieu-003
+type: Portal
+exits:
+  - id: lieu-004-ouest.
+    location: lieu-004
+    direction: est
+  - id: lieu-002-est
+    location: lieu-003
+    direction: ouest
+---
+id: portal-lieu-004
+type: Portal
+exits:
+  - id: lieu-006-nord.
+    location: lieu-006
+    direction: sud
+  - id: lieu-005-sud
+    location: lieu-003
+    direction: nord
+---
+id: portal-lieu-005
+type: Portal
+exits:
+  - id: lieu-007-ouest
+    location: lieu-007
+    direction: ouest
+  - id: lieu-006-est
+    location: lieu-008
+    direction: est
+---
+id: portal-lieu-00554
+type: Portal
+exits:
+  - id: lieu-0075746-ouest
+    location: lieu-011
+    direction: sud
+  - id: lieu-006564-est
+    location: lieu-010
+    direction: nord
+---
+id: portal-lieu-00867
+type: Portal
+exits:
+  - id: lieu-00754-ouest
+    location: lieu-007
+    direction: sud
+  - id: lieu-00654-est
+    location: lieu-006
+    direction: nord
+---
+id: portal-lieu-006
+type: Portal
+exits:
+  - id: lieu-008-nord
+    location: lieu-008
+    direction: nord
+  - id: lieu-007-sud
+    location: lieu-009
+    direction: nord
+---
+id: portal-lieu-007
+type: Portal
+exits:
+  - id: lieu-009-ouest
+    location: lieu-009
+    direction: ouest
+  - id: lieu-008-ouest
+    location: lieu-010
+    direction: ouest
+---
+id: portal-lieu-008
+type: Portal
+exits:
+  - id: lieu-0010-nord
+    location: lieu-010
+    direction: nord
+  - id: lieu-009-sud
+    location: lieu-011
+    direction: nord
+---
+id: portal-lieu-009
+type: Portal
+exits:
+  - id: lieu-0011-sud-ouest
+    location: lieu-012
+    direction: nord-est
+  - id: lieu-009-nord-est
+    location: lieu-010
+    direction: sud-ouest
+---
+id: portal-lieu-010
+type: Portal
+exits:
+  - id: lieu-0011-nord
+    location: lieu-012
+    direction: sud
+  - id: lieu-012-sud
+    location: lieu-013
+    direction: nord
+---
+id: portal-lieu-011
+type: Portal
+exits:
+  - id: lieu-012-nord
+    location: lieu-013
+    direction: sud
+  - id: lieu-013-sud
+    location: lieu-014
+    direction: nord
+---
+id: portal-lieu-012
+type: Portal
+exits:
+  - id: lieu-013-nord
+    location: lieu-014
+    direction: sud
+  - id: lieu-014-sud
+    location: lieu-015
+    direction: nord
+---
+id: portal-lieu-013
+type: Portal
+exits:
+  - id: lieu-014-nord
+    location: lieu-015
+    direction: sud
+  - id: lieu-015-sud
+    location: lieu-016
+    direction: nord
+---
+id: portal-lieu-014
+type: Portal
+exits:
+  - id: lieu-015-nord
+    location: lieu-016
+    direction: sud
+  - id: lieu-016-sud
+    location: lieu-017
+    direction: nord
+---
+id: portal-lieu-015
+type: Portal
+exits:
+  - id: lieu-016-nord-ouest
+    location: lieu-017
+    direction: sud-est
+  - id: lieu-017-sud-est
+    location: lieu-018
+    direction: nord-ouest
+---
+id: portal-lieu-016
+type: Portal
+exits:
+  - id: lieu-017-ouest
+    location: lieu-018
+    direction: est
+  - id: lieu-018-est
+    location: lieu-019
+    direction: ouest
+---
+id: portal-lieu-017
+type: Portal
+exits:
+  - id: lieu-018-nord
+    location: lieu-019
+    direction: sud
+  - id: lieu-019-sud
+    location: lieu-020
+    direction: nord
+---
+id: portal-lieu-018
+type: Portal
+exits:
+  - id: lieu-004-ouest
+    location: lieu-005
+    direction: est
+  - id: lieu-003-est
+    location: lieu-004
+    direction: ouest
+---
+id: portal-lieu-019
+type: Portal
+exits:
+  - id: lieu-005-bis-nord
+    location: lieu-005-bis
+    direction: sud
+  - id: lieu-005-sud-gg
+    location: lieu-005
+    direction: nord
+---
+id: portal-lieu-020
+type: Portal
+exits:
+  - id: lieu-004-ter-sud
+    location: lieu-005-ter
+    direction: nord
+  - id: lieu-004-nord
+    location: lieu-005
+    direction: sud

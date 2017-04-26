@@ -1,0 +1,172 @@
+---
+id: lampe-000
+type: Thing
+name: lampe
+props:
+  - takable
+  - lightable
+name:
+  - lampe
+events:
+  info:
+    actor: "Une lampe"
+  look:
+    actor: |
+      "Une lampe qui peut s'allumer"
+  gender: fem
+  events:
+    info:
+      actor:
+        - props: =lampe-000:light-on
+          data : "Un lampe allumé."
+        - data : "Un lampe éteint."
+    look:
+      actor:
+        - props: object:light-on
+          data : "Un lampe allumé."
+        - data : "Un lampe éteint."
+    light-on:
+      - props : object:light-on
+        actor : "Le lampe est déjà allumé."
+      - actor : "Vous allumez votre lampe."
+        observer: |
+          {{ actor.name }} allume son lampe.
+        effects:
+          - type  : ChangePropEffect
+            modifs: object:light-on
+    light-off:
+      - props : -object:light-on
+        actor : "Le lampe est déjà éteint."
+      - actor : "Vous éteignez votre lampe."
+        observer: |
+          {{ actor.name }} éteind son lampe.
+        effects:
+          - type  : ChangePropEffect
+            modifs: -object:light-on
+---
+id: page-001
+type: Thing
+name: page-1
+props:
+  - takable
+  - key-for-echelle-001
+events:
+  info:
+    actor: "Une page."
+  look:
+    actor: |
+      Page 1
+---
+id: page-002
+type: Thing
+name: page-2
+props:
+  - takable
+  - key-for-echelle-001
+events:
+  info:
+    actor: "Une page."
+  look:
+    actor: |
+      Page 2
+---
+id: page-003
+type: Thing
+name: page-3
+props:
+  - takable
+  - key-for-echelle-001
+events:
+  info:
+    actor: "Une page."
+  look:
+    actor: |
+      Page 3
+---
+id: page-004
+type: Thing
+name: page-4
+props:
+  - takable
+  - key-for-echelle-001
+events:
+  info:
+    actor: "Une page."
+  look:
+    actor: |
+      Page 4
+---
+id: page-005
+type: Thing
+name: page-5
+props:
+  - takable
+  - key-for-echelle-001
+events:
+  info:
+    actor: "Une page."
+  look:
+    actor: |
+      Page 5
+---
+id: page-006
+type: Thing
+name: page-6
+props:
+  - takable
+  - key-for-echelle-001
+events:
+  info:
+    actor: "Une page."
+  look:
+    actor: |
+      Page 6
+---
+id: page-007
+type: Thing
+name: page-7
+props:
+  - takable
+  - key-for-echelle-001
+events:
+  info:
+    actor: "Une page."
+  look:
+    actor: |
+      Page 7
+---
+id: page-008
+type: Thing
+name: page-8
+props:
+  - takable
+events:
+  info:
+    actor: "Une page."
+  look:
+    actor: |
+      Page 8
+---
+id: feuille-001
+type: Thing
+name: feuille-001
+gender: fem
+events:
+  info:
+    actor: "Une feuille."
+  look:
+    actor: |
+      ........
+---
+id: echelle-001
+type: Thing
+name: echelle
+props:
+  - takable
+events:
+  info:
+    actor: "Une echelle."
+  look:
+    actor: |
+      une echelle
+---
