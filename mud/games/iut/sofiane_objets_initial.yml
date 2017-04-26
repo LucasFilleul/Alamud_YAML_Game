@@ -1,5 +1,5 @@
 ---
-id: lampe-000
+id: lampe-001
 type: Thing
 name: lampe
 props:
@@ -17,7 +17,7 @@ events:
   events:
     info:
       actor:
-        - props: =lampe-000:light-on
+        - props: =lampe-001:light-on
           data : "Un lampe allumé."
         - data : "Un lampe éteint."
     look:

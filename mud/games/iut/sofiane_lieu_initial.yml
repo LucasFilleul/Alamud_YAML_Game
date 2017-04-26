@@ -2,7 +2,7 @@
 id: lieu-001
 type: Location
 contains:
-  - lampe-000
+  - lampe-001
 events:
   info:
     actor: "Entrée du survival"
