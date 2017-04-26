@@ -58,7 +58,7 @@ exits:
             - portal:closed
   - id: lieu-001-portal-end
     location: lieu-001
-    direction: sud
+    direction: haut
     events:
       enter-portal:
         actor   : "Vous revenez sur vos pas ! "
