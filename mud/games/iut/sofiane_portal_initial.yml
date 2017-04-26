@@ -189,8 +189,13 @@ exits:
     direction: ouest
 ---
 id: portal-lieu-017
-type: Portal---
-020
+type: Portal
+exits:
+  - id: lieu-018-nord
+    location: lieu-019
+    direction: sud
+  - id: lieu-019-sud
+    location: lieu-020
     direction: nord
 ---
 id: portal-lieu-018
@@ -206,8 +211,9 @@ exits:
 id: portal-lieu-019
 type: Portal
 exits:
-  - id: lieu-005-bi---
-
+  - id: lieu-005-bis-nord
+    location: lieu-005-bis
+    direction: sud
   - id: lieu-005-sud-gg
     location: lieu-005
     direction: nord
