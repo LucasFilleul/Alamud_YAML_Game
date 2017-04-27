@@ -38,6 +38,10 @@ exits:
     props:
       - for-enter
     events:
+      enter-portal:
+        actor   : |
+          Vous continuez sur la route à la recherche de panini !
+          QUAND TOUT A COUP... PAF! Un violent coup vous defonce et vous fait tomber.
       open-with :
         - props   :
             - portal:closed
