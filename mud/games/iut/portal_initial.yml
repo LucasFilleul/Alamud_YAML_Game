@@ -58,7 +58,7 @@ exits:
             - portal:closed
   - id: lieu-001-portal-end
     location: lieu-001
-    direction: sud
+    direction: haut
     events:
       enter-portal:
         actor   : "Vous revenez sur vos pas ! "
@@ -722,6 +722,28 @@ exits:
     events:
       enter-portal:
         actor   : "Vous revenez dans le tunnel !"
+        observer:
+      leave-portal:
+        observer:
+---
+id: maison-002-bureau-a-clef
+type: Portal
+exits:
+  - id: maison-002-sud
+    location: maison-002
+    direction: sud
+    events:
+      enter-portal:
+        actor   : "Vous entrez dans le bureau ! "
+        observer:
+      leave-portal:
+        observer:
+  - id: bureau-002-nord
+    location: box-a-clef
+    direction: nord
+    events:
+      enter-portal:
+        actor   : "Vous revenez dans la pièce principale !"
         observer:
       leave-portal:
         observer:

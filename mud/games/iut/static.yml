@@ -75,6 +75,10 @@ events:
       - actor   : "Vous tentez en vain de prendre {{ object.noun_the() }}."
         observer: "{{ actor.name }} tente en vain de prendre {{ object.noun_the() }}."
 
+  talk:
+    failed:
+      actor : "Ce n'est pas le moment ! Tuez ces zombies !"
+
   failed-action:
     - props   : action:cannot-see
       actor   : "Dans cette obscurité, vous n'y voyez rien."
@@ -180,15 +184,15 @@ events:
   drop-in:
     - props: event:object2-not-container
       actor: |
-        Vous ne pouvez pas poser cela là.
+        Vous ne pouvez pas donner cela.
     - props: event:object-not-in-inventory
       actor: |
-        Vous ne pouvez poser que ce que vous avez
+        Vous ne pouvez donner que ce que vous avez
         dans votre inventaire.
     - actor: |
-        Vous posez {{ object.noun_the() }} dans {{ object2.noun_the() }}
+        Vous donnez {{ object.noun_the() }} au {{ object2.noun_the() }}
       observer: |
-        {{ actor.name }} pose {{ object.noun_the() }} dans {{ object2.noun_the() }}
+        {{ actor.name }} donne {{ object.noun_the() }} au {{ object2.noun_the() }}
 
   push:
     failed:
