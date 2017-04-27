@@ -28,7 +28,7 @@ events:
     light-on:
       - props : object:light-on
         actor : "Le lampe est déjà allumé."
-      - actor : "Vous allumez votre lampe."
+      - actor : "Vous allumez votre lampe. ET TU NIQUE TA RACE!!!!!!!!!!!!!!!!!!!!!!!!!!!"
         observer: |
           {{ actor.name }} allume son lampe.
         effects:
@@ -171,4 +171,4 @@ events:
     actor: "Une echelle."
   look:
     actor: |
-      une echelle
+      Une echelle

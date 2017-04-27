@@ -94,7 +94,7 @@ events:
       actor   : "{{ object.noun_the() }} n'est pas allumable."
     - props   : object:light-on
       actor   : "{{ object.noun_the() }} est déjà allumé{{ object.noun_e() }}"
-    - actor   : "Vous allumez {{ object.noun_the() }}."
+    - actor   : "Vous allumez {{ object.noun_the() }}. Vous y voyez désormais beaucoup plus clair! Au nord-est, se trouve la sortie."
       observer: "{{ actor.name }} allume {{ object.noun_his() }}."
       effects :
         - type  : ChangePropEffect
