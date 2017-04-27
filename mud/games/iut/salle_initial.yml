@@ -371,3 +371,14 @@ events:
   look:
     actor: |
       Le magasin semble être inhabité. Regardons ce qu'il y a.
+---
+id: box-a-clef
+type: Location
+contains:
+  - clef-000
+events:
+  info:
+    actor: "Vous arrivez dans le bureau."
+  look:
+    actor: |
+      Les clefs sont bien sur le bureau. Allez au nord pour ressortir.

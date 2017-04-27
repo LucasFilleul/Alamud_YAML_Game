@@ -36,7 +36,7 @@ def make_rules():
         (LightOnAction  , r"allumer %s(\S+)" % DETS),
         (LightOffAction , r"[eé]teindre %s(\S+)" % DETS),
         (DropAction     , r"(?:poser|laisser) %s(\S+)" % DETS),
-        (DropInAction   , r"(?:poser|laisser) %s(\S+) (?:dans |sur |)%s(\S+)" % (DETS,DETS)),
+        (DropInAction   , r"(?:donner) %s(\S+) (?:a |au |)%s(\S+)" % (DETS,DETS)),
         (PushAction     , r"(?:appuyer|pousser|presser)(?: sur|) %s(\S+)" % DETS),
         (ShootAction    , r"(?:tirer|t)(?: avec|) %s(\S+)" % DETS),
         (PlayWithAction , r"jouer %s(\S+) avec %s(\w+)" % (DETS,DETS)),

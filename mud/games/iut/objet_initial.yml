@@ -280,6 +280,9 @@ events:
   look:
     actor: |
       C'est un medikit, il contient quelques soins.
+  drop-in:
+    actor: |
+      Merci, allez derrière moi au sud, passez la porte et les clefs seront sur le bureau.
 ---
 id: pistolet-000
 type: Thing
@@ -417,10 +420,12 @@ events:
     - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
-      observer:
+    - props : =humains-000:not_safe
       effects:
         - type  : ChangePropEffect
           modifs: object:kill
+        - type  : ChangePropEffect
+          modifs: humains-000:demi_safe
 ---
 id: zombie2
 type: Thing
@@ -449,10 +454,12 @@ events:
     - props : object:kill
       actor : "Le zombie est déjà mort."
     - actor : "Vous tuez le zombie."
-      observer:
+    - props : =humains-000:demi_safe
       effects:
         - type  : ChangePropEffect
           modifs: object:kill
+        - type  : ChangePropEffect
+          modifs: humains-000:safe
 ---
 id: zombie3
 type: Thing
@@ -754,9 +761,8 @@ props:
   - killable
   - killable-with
   - closed
+  - safe
   - pnj
-contains:
-  - clef-000
 events:
   info:
     actor:
@@ -767,9 +773,10 @@ events:
     actor: |
       Cette personne semble être en danger, des zombies tentent de le manger.. !
   talk:
-    actor: |
-      Merci de m'avoir sauvé. Pouvez vous me rammenez le jouet de ma fille ainsi qu'un kit de soin.
-      Je vous donnerais les clefs de la ville !
+    - props : =humains-000:safe
+      actor : |
+        Merci de m'avoir sauvé. Pouvez vous me rammenez le jouet de ma fille ainsi qu'un kit de soin.
+        Je vous donnerais les clefs de la ville !
   kill :
     - props : object:kill
       actor : "Le survivant est déjà mort."

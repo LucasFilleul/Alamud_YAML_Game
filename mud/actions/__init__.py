@@ -17,6 +17,7 @@ from .shoot     import ShootAction
 from .teleport  import TeleportAction
 from .drink     import DrinkAction
 from .eat       import EatAction
+from .give      import GiveAction
 from .kill	import KillAction, KillWithAction
 from .talk      import TalkAction
 from .jouer 	import PlayWithAction
