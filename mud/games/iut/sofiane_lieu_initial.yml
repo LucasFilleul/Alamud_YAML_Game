@@ -8,6 +8,8 @@ events:
     actor: "Entrée du survival"
   look:
     actor: |
+      Vous continuez sur la route à la recherche de survivants et d'un lieu sur.
+      Quand tout à coup .. PAF !!! Un coup violent vous fait tomber. 
       Vous vous réveillez dans une forêt durant la nuit que vous
       ne connaissez pas, vous êtes terrifié. Vous ne voyez rien.
       Vous vous demandez ce que vous faites ici. En regardant bien,

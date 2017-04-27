@@ -214,8 +214,10 @@ events:
 id: piedbiche-000
 type: Thing
 name:
-  - pied de biche
+  - pieddebiche
   - piedbiche
+  - pied
+  - biche
 props:
   - takable
   - shootable
