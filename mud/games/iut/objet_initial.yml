@@ -232,6 +232,7 @@ name: clef
 props:
   - takable
   - key-for-portail-000
+  - cannot-see
 gender: fem
 events:
   info:
@@ -317,6 +318,11 @@ events:
   look:
     actor: |
       C'est un fusil à pompes, il contient encore des balles.
+  take:
+    actor: |
+      Vous tentez de prendre le fusil à pompe. Le zombie vous prend le bras et vous mord. Vous mourrez ici...
+    effects:
+      - type  : DeathEffect
   shoot:
     - props : object:shoot
       actor : "Le chargeur est vide."
@@ -737,7 +743,7 @@ events:
           modifs: object:kill
 ---
 id: humains-000
-type: Thing
+type: Container
 name:
   - survivant
   - homme
@@ -747,6 +753,10 @@ name:
 props:
   - killable
   - killable-with
+  - closed
+  - pnj
+contains:
+  - clef-000
 events:
   info:
     actor:
@@ -756,6 +766,10 @@ events:
   look:
     actor: |
       Cette personne semble être en danger, des zombies tentent de le manger.. !
+  talk:
+    actor: |
+      Merci de m'avoir sauvé. Pouvez vous me rammenez le jouet de ma fille ainsi qu'un kit de soin.
+      Je vous donnerais les clefs de la ville !
   kill :
     - props : object:kill
       actor : "Le survivant est déjà mort."

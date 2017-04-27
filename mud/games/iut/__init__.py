@@ -7,7 +7,7 @@ from mud.actions import (
     OpenWithAction, CloseAction, TypeAction, InventoryAction, ShootAction,
     LightOnAction, LightOffAction, DropAction, DropInAction, DrinkAction, EatAction,
     PushAction, TeleportAction, EnterAction, LeaveAction, LightWithAction, PlayWithAction,
-    KillAction, KillWithAction
+    KillAction, KillWithAction, TalkAction
 )
 
 import mud.game
@@ -23,6 +23,7 @@ def make_rules():
         (GoAction       , r"(?:aller |)(%s)" % "|".join(DIRS)),
         (LightWithAction, r"allumer %s(\S+) avec %s(\w+)" % (DETS,DETS)),
         (TakeAction     , r"(?:p|prendre) %s(\S+)" % DETS),
+        (TalkAction     , r"(?:parler) %s(\S+)" % DETS),
         (DrinkAction    , r"(?:b|boire) %s(\S+)" % DETS),
         (EatAction      , r"(?:m|manger) %s(\S+)" % DETS),
         (LookAction     , r"(?:r|regarder)"),

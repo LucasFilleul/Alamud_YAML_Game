@@ -25,3 +25,4 @@ from .narrative    import NarrativeEvent
 from .drink	   import DrinkEvent
 from .eat	   import EatEvent
 from .jouer	   import PlayWithEvent
+from .talk	   import TalkEvent

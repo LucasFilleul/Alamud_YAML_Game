@@ -216,7 +216,6 @@ contains:
   - humains-000
   - zombie1
   - zombie2
-  - clef-000
 events:
   info:
     actor: "Vous arrivez près de la maison où vous avez entendu les cris."
@@ -240,7 +239,7 @@ events:
   look:
     actor: |
       Vous voyez plusieurs zombie, impossible de les compter. Si jamais vous tirez, les autres risqueraient de vous entendre.
-      Au nord vous retournez dans la rue.
+      Au nord vous retournez dans la rue. A l'ouest vous continuez dans l'immeuble.
 ---
 id: immeuble-001
 type: Location
