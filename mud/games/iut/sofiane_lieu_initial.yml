@@ -221,7 +221,6 @@ events:
 id: lieu-019
 type: Location
 contains:
-  - page-008
   - feuille-001
 events:
   info:
@@ -230,9 +229,7 @@ events:
     actor: |
       Vous apercevez un arbre splendide. La page est accrochée sur une branche
       en hauteur. Il vous faut une échelle pour y accéder. Néanmoins, il y a une
-      feuille accrochée à hauteur ou est inscrit "L'échelle se trouve dans une
-      direction qui a le même nom qu'une célèbre chanson de nino ferrer. Partout
-      ailleurs, le slender est présent."
+      feuille accrochée à l'arbre, peut être devrié vous la regarder ...
 ---
 id: lieu-020
 type: Location
@@ -244,4 +241,15 @@ events:
   look:
     actor: |
       Pas de slender ici mais l'echelle, bravo ! Quelle culture !.
+---
+id: lieu-021
+type: Location
+contains:
+  - page-008
+events:
+  info:
+    actor: "Dans l'arbre"
+  look:
+    actor: |
+      Vous êtes dans l'arbre. Vous n'avez plus qu'à prendre la page. Bravo.
 ---

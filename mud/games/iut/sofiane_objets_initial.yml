@@ -156,13 +156,16 @@ events:
     actor: "Une feuille."
   look:
     actor: |
-      ........
+      "L'échelle se trouve dans une
+      direction qui a le même nom qu'une célèbre chanson de nino ferrer. Partout
+      ailleurs, le slender est présent."
 ---
 id: echelle-001
 type: Thing
 name: echelle
 props:
   - takable
+  - key-for-monter-000
 events:
   info:
     actor: "Une echelle."

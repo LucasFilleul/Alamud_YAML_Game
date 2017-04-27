@@ -227,3 +227,45 @@ exits:
   - id: lieu-004-nord
     location: lieu-005
     direction: sud
+---
+id: arbre-ending
+type: Portal
+props:
+  - closed
+  - closable
+exits:
+  - id: lieu-019-monter
+    location: lieu-019
+    direction: haut
+    name:
+      - arbre
+    props:
+      - for-enter
+    events:
+      open-with :
+        - props   :
+            - portal:closed
+            - object2:key-for-monter-000
+          effects :
+            type  : ChangePropEffect
+            modifs:
+              - -portal:closed
+          actor   : |
+            Vous ouvrez l'accès à l'arbre
+        - props   :
+            - portal:closed
+            - -object2:key-for-monter-000
+          actor   : |
+            Vous tentez vainement de monter dans l'arbre
+        - props   :
+            - portal:closed
+  - id: lieu-021-portal
+    location: lieu-021
+    direction: bas
+    events:
+      enter-portal:
+        actor   : "Vous descendez de l'arbre ! "
+        observer:
+      leave-portal:
+        observer:
+---
