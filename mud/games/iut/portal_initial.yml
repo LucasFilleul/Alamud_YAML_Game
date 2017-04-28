@@ -42,6 +42,8 @@ exits:
         actor   : |
           Vous continuez sur la route à la recherche de panini !
           QUAND TOUT A COUP... PAF! Un violent coup vous defonce et vous fait tomber.
+        effects :
+          type  : ClearEffect
       open-with :
         - props   :
             - portal:closed

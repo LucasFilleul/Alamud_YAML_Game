@@ -81,12 +81,12 @@ exits:
 id: portal-lieu-006
 type: Portal
 exits:
-  - id: lieu-008-nord
-    location: lieu-008
-    direction: nord
+  - id: lieu-007-nord
+    location: lieu-007
+    direction: nord-ouest
   - id: lieu-007-sud
     location: lieu-009
-    direction: nord
+    direction: sud-est
 ---
 id: portal-lieu-007
 type: Portal

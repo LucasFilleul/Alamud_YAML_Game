@@ -24,6 +24,7 @@ from .teleport     import TeleportEvent
 from .narrative    import NarrativeEvent
 from .drink	   import DrinkEvent
 from .eat	   import EatEvent
+from .clear	   import ClearEvent
 from .give	   import GiveEvent
 from .jouer	   import PlayWithEvent
 from .talk	   import TalkEvent

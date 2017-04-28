@@ -16,4 +16,5 @@ from .open       import OpenEffect, OpenWithEffect
 from .push       import PushEffect
 from .take       import TakeEffect
 from .type       import TypeEffect
+from .clear      import ClearEffect
 from .narrative  import NarrativeEffect

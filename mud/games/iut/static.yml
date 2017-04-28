@@ -169,7 +169,8 @@ events:
       {% else %}
       {{ actor.name }} est mort!
       {% end %}
-
+  clear:
+    actor: "Votre inventaire à été vidé !"
   dead-action:
     actor: |
       Vous êtes mort.  Pour recommencer le MUD, cliquer sur Logout,
