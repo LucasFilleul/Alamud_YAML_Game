@@ -10,6 +10,9 @@ contains:
   - gateaux-000
   - eau-000
   - sac-000
+  - cigarette-000
+  - briquet-000
+  - biere-000
 events:
   info:
     actor: "Notre maison !"

@@ -120,8 +120,8 @@ events:
           modifs: object:light-with
 
   inventory:
-    empty: "Votre inventaire est vide."
-    intro: "Votre inventaire contient:"
+    empty: "Votre sac est vide."
+    intro: "Votre sac contient:"
 
   open:
     actor     :

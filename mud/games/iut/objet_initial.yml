@@ -1,6 +1,105 @@
 # ###########################################################################################################
 # TOUTES LES OBJETS
 # ###########################################################################################################
+id: biere-000
+type: Thing
+gender: fem
+name:
+  - desperados
+  - biere
+props:
+  - takable
+  - drinkable
+events:
+  info:
+    actor:
+      - props: =biere-000:drink
+        data : "La bière est vide."
+      - data : "Cette biere semble fraiche, pourquoi pas la boire."
+  look:
+    actor: |
+      Cette biere semble fraiche !
+  drink:
+    - props : object:drink
+      actor : "Le Bière est déjà vide. Faut dire, ça part vite ces choses..."
+    - actor : "Vous buvez la bière. Le tout en cul-sec histoire de faire le mec !"
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:drink
+---
+id: briquet-000
+type: Thing
+name: briquet
+props:
+  - takable
+  - lightable
+events:
+  info:
+    actor:
+        - props: =briquet-000:light-on
+          data : "Un briquet allumé."
+        - data : "Un briquet."
+  look:
+    actor: |
+      Un zippo ! A l'ancienne poto !
+  light-on:
+    - props : object:light-on
+      actor : "Le briquet est déjà allumée."
+    - actor : "Vous allumez le briquet."
+      observer:
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:light-on
+  light-off:
+    - props : -object:light-on
+      actor : "Le briquet est déjà éteint."
+    - actor : "Vous éteignez votre briquet."
+      observer: |
+        {{ actor.name }} éteind le briquet.
+      effects:
+        - type  : ChangePropEffect
+          modifs: -object:light-on
+---
+id: cigarette-000
+type: Thing
+name: clope
+gender: fem
+props:
+  - takable
+  - lightable-with
+events:
+  info:
+    actor:
+      - props: =cigarette-000:light-on
+        data : "La clope est allumée, l'odeur du tabac prend le dessus sur les autres odeurs."
+      - data : "C'est un tabac très fort mais comme un homme on devrait la fumer !!"
+    look:
+      actor:
+        - props: object:light-on
+          data : "Une clope allumée."
+        - data : "Une clope éteinte."
+  light-on:
+    - props : object:light-on
+      actor : "La clope est déjà allumée."
+    - actor : "Vous allumez votre clope."
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:light-on
+  light-with:
+    - props : =cigarette-000:light-with
+      actor : "La clope est déjà allumée."
+    - actor : "Vous allumez la clope. Vous toussez mais ça va ! Le tabac est très fort !"
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:light-on
+  light-off:
+    - props : =cigarette-000:light-on
+      actor : "La clope est déjà éteinte."
+    - actor : "Vous jetez la clope à terre et l'écrasez du pied tel un Cowboy ! "
+      effects:
+        - type  : ChangePropEffect
+          modifs: object:light-off
 ---
 id: eau-000
 type: Thing
